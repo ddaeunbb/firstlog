@@ -25,20 +25,20 @@
 
       <div class="input-container">
         <div class="input-wrap">
-          <div id="inputId" class="input-box1">
-            <h4 class="top">ID</h4>
+          <div id="inputbox1" class="input-box1">
+            <h4 id="input-name1" class="top">설명칸</h4>
             <input class="input" type="text" placeholder="아이디를 입력해주세요.">
           </div>
-          <div id="inputPw" class="input-box2">
-            <h4 class="bottom">PW</h4>
+          <div id="inputbox2" class="input-box2">
+            <h4 id="input-name2" class="bottom">설명칸</h4>
             <input class="input" type="password" placeholder="비밀번호를 입력해주세요.">
           </div>
         </div>
       </div>
 
       <div class="input-btn">
-        <div><button onclick="openInput('inputId','block')">첫번째 열기</button></div>
-        <div><button onclick="openInput('inputPw','block')">두번째 열기</button></div>
+        <div><button onclick="openInput1()">첫번째 열기</button></div>
+        <div><button onclick="openInput2()">두번째 열기</button></div>
       </div>
 
     </div>
@@ -56,12 +56,19 @@
     </div>
 
     <script>
+
       function openAlert(display){
         document.getElementById('alert').style.display = display;
       }
 
-      function openInput(select, display){
-        document.getElementById(select).style.display = display;
+      function openInput1(){
+      document.getElementById('input-name1').innerHTML = 'ID';
+      document.getElementById('inputbox1').style.display = 'flex';
+      }
+
+      function openInput2(){
+      document.getElementById('input-name2').innerHTML = 'PW';
+      document.getElementById('inputbox2').style.display = 'flex';
       }
     </script>
 </body>
