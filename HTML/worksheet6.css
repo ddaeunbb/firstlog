@@ -1,0 +1,121 @@
+@font-face{
+  font-family: '나눔스퀘어';
+  src: url(./font/NanumSquareOTF_acR.otf)
+}
+
+@font-face {
+  font-family: '나눔스퀘어2';
+  src: url(../font/NanumSquareOTF_acB.otf);
+}
+
+*,p{
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: '나눔스퀘어1';
+  background-color: #fff;
+  background-image: url(./photo/grid.png);
+  background-size: 90%;
+  background-attachment: fixed;  
+}
+
+.title{
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.work-area{
+  display: block;
+}
+
+.line{
+  width: 70%;
+  max-width: 500px;
+  margin: 60px auto 30px;
+  opacity: 40%;
+}
+
+.comment-container{
+  width: 80%;
+  max-width: 700px;
+  height: 180px;
+  margin: 30px auto;
+  padding: 25px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  background-color: #fff;
+}
+
+.comment-box{
+  display: flex;
+}
+
+.comment-title{
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.date{
+  font-size: 12px;
+  padding: 15px 8px;
+  color: black;
+  opacity: 0.4;
+}
+
+.comment{
+  font-size: 14px;
+}
+
+/* work-area 부분 css */
+.page-container{
+  text-align: center;
+}
+
+.page-thumbnail{
+  width: 90%;
+  max-width: 600px;
+  margin: 0px auto;
+  position: relative;
+}
+
+.page-thumbnail img{
+  width: 100%;
+  height: 100%;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn{
+  display: inline-block;
+  margin: 20px auto 0 auto;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  background-color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  transition: all 0.2s;
+}
+
+.btn:hover{
+  background-color: #000;
+  color: white;
+}
+
+.btn:active{
+  transform: scale(0.9);
+}

@@ -1,0 +1,146 @@
+@font-face{
+  font-family: '나눔스퀘어';
+  src: url(./font/NanumSquareOTF_acR.otf)
+}
+
+@font-face {
+  font-family: '나눔스퀘어2';
+  src: url(../font/NanumSquareOTF_acB.otf);
+}
+
+*,p{
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: '나눔스퀘어';
+  background-color: #fff;
+  background-image: url(./photo/background.png);
+  background-size: 20%;
+  background-attachment: fixed;  
+}
+
+a:link{
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+.main-area{
+  margin: auto;
+  display: block;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.main-page img{
+  width: 90%;
+  max-width: 700px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+}
+
+.main-title{
+  margin-top: 30px;
+}
+
+.list-container{
+  display: block;
+  margin: 50px auto 50px;
+}
+
+.worksheet{
+  width: 90%;
+  max-width: 700px;
+  height: 180px;
+  margin: 12px auto;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
+  background-color: #fff;
+}
+
+.content{
+  float: left;
+  width: 70%;
+  height: 60%;
+  padding-right: 20px;
+}
+
+.profile-top{
+  display: block;
+  width: 100%;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.blog-profile{
+  width: 33px;
+  height: 33px; 
+  margin-right: 8px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.blog-profile img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info{
+  margin-top: 5px;
+}
+
+.profile-info p{
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.thumbnail{
+  width: 30%;
+  height: 100%;
+  float: left;
+  display: flex;
+}
+
+.thumbnail img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.title p{
+  color: #4d4d4d;
+  font-size: 16px;
+  height: 68px;
+  line-height: 22px;
+  margin-top: 8px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.worksheet:hover{
+  filter: brightness(90%);
+  transition-duration: 0.2s;
+}
+
+.worksheet:active{
+  transform: scale(0.98);
+}
+
+@media screen and (max-width: 768px) {
+.title h4 {
+    height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

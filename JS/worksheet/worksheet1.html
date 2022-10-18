@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet7</title>
+  <link rel="stylesheet" href="./worksheet1.css">
+</head>
+
+<body>
+  <div class="main-background">
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#1 Alert Box</h2>
+    </div>
+
+    <div class="work-area">
+      <div class="alert-container">
+        <div id="alert" class="alert-box"></div>
+        <div class="alert-btn">
+        <button onclick="openAlert('block')">열기</button>
+        <button onclick="openAlert('none')">닫기</button>
+        </div>
+      </div>
+
+      <div class="input-container">
+        <div class="input-wrap">
+          <div id="inputId" class="input-box1">
+            <h4 class="top">ID</h4>
+            <input class="input" type="text" placeholder="아이디를 입력해주세요.">
+          </div>
+          <div id="inputPw" class="input-box2">
+            <h4 class="bottom">PW</h4>
+            <input class="input" type="password" placeholder="비밀번호를 입력해주세요.">
+          </div>
+        </div>
+      </div>
+
+      <div class="input-btn">
+        <div><button onclick="openInput('inputId','block')">첫번째 열기</button></div>
+        <div><button onclick="openInput('inputPw','block')">두번째 열기</button></div>
+      </div>
+
+    </div>
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.10.18</p>
+        </div>
+        <p class="comment">드디어 자바스크립트 입문...!! 커여운 고양이를 넣어보았씁니다. 확실히 html, css보다 엄격한 체계라고 느껴진다.</p>
+      </div>
+    </div>
+
+    <script>
+      function openAlert(display){
+        document.getElementById('alert').style.display = display;
+      }
+
+      function openInput(select, display){
+        document.getElementById(select).style.display = display;
+      }
+    </script>
+</body>
+</html>
