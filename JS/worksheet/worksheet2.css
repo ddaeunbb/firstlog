@@ -32,6 +32,17 @@ body {
   text-align: center;
 }
 
+@keyframes slide{
+    0%{ transform: translateX(4000px)}
+    80%{ transform: translateX(-10px) skew(-20deg)}
+    100%{ transform: translateX(0px)}
+}
+
+.slide{
+  animation-name: slide;
+  animation-duration: 1.2s;
+}
+
 .line {
   width: 70%;
   max-width: 500px;
