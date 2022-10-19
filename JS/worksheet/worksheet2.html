@@ -52,12 +52,14 @@
       </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
     <script>
 
-      document.querySelector('.navbar-toggler').addEventListener('click', function(){
-
-        document.querySelector('.list-group').classList.toggle('show');
+      $('.navbar-toggler').on('click', function(){
+        $('.list-group').addClass('show');
       });
+
     </script>
 
 

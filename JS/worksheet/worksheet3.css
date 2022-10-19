@@ -1,0 +1,226 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "기본체";
+  src: url(./font/NanumSquareOTF_acR.otf);
+}
+@font-face {
+  font-family: "볼드체";
+  src: url(../font/NanumSquareOTF_acB.otf);
+}
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: "볼드체";
+}
+
+*, p {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "기본체";
+  background-color: #fff;
+  background-image: url(../../background/grid.png);
+  background-size: 90%;
+  background-attachment: fixed;
+}
+
+.title {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.line {
+  width: 70%;
+  max-width: 500px;
+  margin: 60px auto 30px;
+  opacity: 40%;
+}
+
+.comment-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.commnet-cotent {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-top {
+  display: flex;
+}
+
+.comment-title {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 12px;
+  padding: 15px 8px;
+  color: black;
+  opacity: 0.4;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+.work-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.modal-container {
+  text-align: center;
+  margin-bottom: 100px;
+}
+.modal-container h4 {
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.btn-container {
+  width: 200px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  width: 70px;
+  padding: 5px 20px;
+  border: 1px solid #000;
+  color: white;
+  background-color: skyblue;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btn:hover {
+  color: black;
+  border: 1px solid #fff;
+}
+
+.modal-view1 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.modal-view2 {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  bottom: 1000px;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.modal-box {
+  width: 80%;
+  max-width: 500px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.modal-box p {
+  font-size: 14px;
+  margin: 5px 0px;
+}
+
+.modal-content {
+  width: 200px;
+  height: 150px;
+  border: none;
+}
+.modal-content img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 30px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.close button {
+  width: 40px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  background-color: skyblue;
+  color: white;
+  transition: all 0.5s;
+}
+
+.close:hover button {
+  color: black;
+  transform: scale(1.1);
+}
+
+.open-first {
+  visibility: visible;
+  opacity: 1;
+}
+
+.open-second {
+  visibility: visible;
+  opacity: 1;
+  bottom: 0;
+}
+
+@media screen and (max-width: 786px) {
+  .work-area {
+    flex-direction: column;
+  }
+  .modal-container {
+    margin-bottom: 10px;
+  }
+  .close {
+    top: 150px;
+    right: 10px;
+  }
+}/*# sourceMappingURL=worksheet3.css.map */

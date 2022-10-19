@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet3</title>
+  <link rel="stylesheet" href="./worksheet3.css">
+</head>
+
+<body>
+
+  <div class="modal-view1">
+    <div class="modal-box">
+      <p>당신은 방금 행운의 고양이와 마주쳤습니다!</p>
+      <div class="modal-content">
+        <img src="../source/worksheet3-1.jpeg" alt="네잎클로버와 함께있는 고양이">
+      </div>
+      <div class="close"><button>X</button></div>
+    </div>
+  </div>
+
+  <div class="modal-view2">
+    <div class="modal-box">
+      <p>당신은 방금 행운의 고양이와 마주쳤습니다!</p>
+      <div class="modal-content">
+        <img src="../source/worksheet3-1.jpeg" alt="네잎클로버와 함께있는 고양이">
+      </div>
+      <div class="close"><button>X</button></div>
+    </div>
+  </div>
+
+  <div class="main-background">
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#2 toggle menu</h2>
+    </div>
+
+    <div class="work-area">
+
+      <div class="modal-container">
+        <h4>First Modal</h4>
+        <div class="btn-container">
+          <button class="btn open-1">열기</button>
+        </div>
+      </div>
+
+      <div class="modal-container">
+        <h4>Second Modal</h4>
+        <div class="btn-container">
+          <button class="btn open-2">열기</button>
+        </div>
+      </div>
+
+    </div>
+
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.10.19</p>
+        </div>
+        <p class="comment">jQuery 쓰는 법 배웠는데 어렵다.. 셀렉터 너무 헷갈림.. 환장하고 미췹니다..^^;;</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+      $('.open-1').on('click', function(){
+        $('.modal-view1').addClass('open-first');
+      });
+
+      $('.close').on('click', function(){
+        $('.modal-view1').removeClass('open-first');
+      });
+
+      $('.open-2').on('click', function(){
+        $('.modal-view2').addClass('open-second');
+      });
+
+      $('.close').on('click', function(){
+        $('.modal-view2').removeClass('open-second');
+      });
+    </script>
+
+
+</body>
+</html>
