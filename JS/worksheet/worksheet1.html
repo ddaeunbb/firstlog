@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Worksheet7</title>
+  <title>Worksheet1</title>
   <link rel="stylesheet" href="./worksheet1.css">
 </head>
 
@@ -19,7 +19,7 @@
         <div id="alert" class="alert-box"></div>
         <div class="alert-btn">
         <button onclick="openAlert('block')">열기</button>
-        <button onclick="openAlert('none')">닫기</button>
+        <button id="close">닫기</button>
         </div>
       </div>
 
@@ -60,6 +60,10 @@
       function openAlert(display){
         document.getElementById('alert').style.display = display;
       }
+
+      document.getElementById('close').addEventListener('click', function(){
+        document.getElementById('alert').style.display = 'none';
+      });
 
       function openInput1(){
       document.getElementById('input-name1').innerHTML = 'ID';
