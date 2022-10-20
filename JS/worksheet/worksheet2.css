@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @font-face {
   font-family: "기본체";
-  src: url(./font/NanumSquareOTF_acR.otf);
+  src: url(../../font/NanumSquareOTF_acR.otf);
 }
 @font-face {
   font-family: "볼드체";
-  src: url(../font/NanumSquareOTF_acB.otf);
+  src: url(../../font/NanumSquareOTF_acB.otf);
 }
 h1, h2, h3, h4, h5, h6, strong {
   font-family: "볼드체";
