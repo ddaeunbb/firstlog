@@ -68,6 +68,7 @@ h1, h2, h3, h4, h5, h6, strong {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  margin-bottom: 70px;
 }
 
 .block {
@@ -111,6 +112,11 @@ h1, h2, h3, h4, h5, h6, strong {
 
 .box3 {
   background-image: url(./source/worksheet3.jpeg);
+  background-size: cover;
+}
+
+.box4 {
+  background-image: url(./source/worksheet4.jpeg);
   background-size: cover;
 }
 

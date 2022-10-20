@@ -88,147 +88,145 @@ animation-duration: 1.2s;
   font-size: 14px;
 }
 
-.work-area {
+// work-area 부분 css
+
+.work-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.mail-btn{
+  transition: all 0.5s;
+}
+
+.mail-btn button{
+  width: 200px;
+  height: 200px;
+  background-color: #fff;
+  background-image: url(../source/worksheet4-1.png);
+  background-size: contain;
+  cursor: pointer;
+  border: 1px solid #eee;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mail-btn:hover{
+  transform: scale(1.1);
+}
+
+.modal-container{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  background : rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.7s;
+}
+
+@keyframes shake{
+  0%{transform: rotate(0deg)}
+  25%{transform: rotate(10deg);}
+  50%{transform: rotate(-10deg)}
+  75%{transform: rotate(10deg)}
+  100%{transform: rotate(0deg)}
+}
+
+.modal-head{
+  width: 250px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-sub{
+  width: 300px;
+  height: 50px;
+  color: white;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.modal-head:hover{
+  animation-name: shake;
+  animation-duration: 0.7s;
+}
+
+.modal-content{
+  width: 400px;
+  height: 400px;
+  background-image: url(../source/worksheet4-2.jpg);
+  background-size: contain;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h4{
+    margin-bottom: 20px;
+  }
+}
+
+.mail-text{
+  width: 300px;
+  height: 300px;
+  font-size: 15px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.btn-container{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  margin-top: 30px;
 }
 
-.modal-container {
-  text-align: center;
-  margin-bottom: 10px;
-}
-.modal-container h4 {
-  margin-bottom: 20px;
-  font-weight: bolder;
-}
-
-.btn-container {
-  width: 200px;
-  height: 80px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-}
-
-.btn {
-  width: 70px;
-  padding: 5px 20px;
-  border: 1px solid #000;
-  color: white;
-  background-color: skyblue;
-  cursor: pointer;
-  border-radius: 20px;
-}
-
-.btn:hover {
-  color: black;
-  border: 1px solid #fff;
-}
-
-.modal-view1 {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 100;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 1s;
-}
-
-.modal-view2 {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  z-index: 100;
-  bottom: 1000px;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 1s;
-}
-
-.modal-box {
-  width: 80%;
-  max-width: 500px;
-  height: 200px;
-  background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
-.modal-box p {
-  font-size: 14px;
-  margin: 5px 0px;
-}
-
-.modal-content {
-  width: 200px;
-  height: 150px;
-  border: none;
-}
-.modal-content img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+.btn{
+  width: 80px;
+  height: 50px;
   border-radius: 30px;
-}
-
-.close {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-}
-.close button {
-  width: 40px;
-  height: 30px;
-  border-radius: 10px;
   border: none;
-  font-size: 14px;
-  background-color: skyblue;
-  color: white;
-  transition: all 0.5s;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
 }
 
-.close:hover button {
-  color: black;
+.btn:hover{
+  background-color: #000;
+  color: #fff;
   transform: scale(1.1);
 }
 
-.open-first {
+.show-modal{
   visibility: visible;
   opacity: 1;
 }
 
-.open-second {
-  visibility: visible;
-  opacity: 1;
-  bottom: 0;
+@media screen and (max-width: 768px){
+  .modal-content{
+    width: 350px;
+    height: 350px;
+  }
+  .mail-text{
+    width: 300px;
+    height: 250px;
+  }
 }
-
-@media screen and (max-width: 786px) {
-  .work-area {
-    flex-direction: column;
-  }
-  .close {
-    top: 150px;
-    right: 10px;
-  }
-}/*# sourceMappingURL=worksheet3.css.map */
