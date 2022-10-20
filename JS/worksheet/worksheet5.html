@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet4</title>
+  <link rel="stylesheet" href="./worksheet5.css">
+</head>
+
+<body class="light">
+
+  <div class="main-background">
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#5 dark mode</h2>
+      <p class="slide">📍버튼을 눌러주세요.</p>
+    </div>
+
+    <div class="work-area">
+
+      <div>
+        <button class="trans-mode">Light</button>
+      </div>
+
+    </div>
+
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.10.20</p>
+        </div>
+        <p class="comment">변수 지정하는 걸 배웠다. 변수 지정은 var let const가 있다.. 함수를 짜는 법도 제대로 배운 듯 하다... 알고리즘에서 벗어날 수 없는 개발..</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+      var count = 0;
+
+      $('.trans-mode').on('click', function(){
+        count = count + 1;
+        if (count % 2 == 1){
+          $('.trans-mode').html('Dark');
+          $('.trans-mode').addClass('dark');
+          $('.comment-title').addClass('dark');
+          $('.comment-container').addClass('dark');
+          $('.light').addClass('black');
+        } else{
+          $('.trans-mode').html('Light');
+          $('.trans-mode').removeClass('dark');
+          $('.comment-title').removeClass('dark');
+          $('.comment-container').removeClass('dark');
+          $('.light').removeClass('black');
+        }
+      });
+
+    </script>
+
+
+</body>
+</html>

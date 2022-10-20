@@ -124,6 +124,7 @@ body {
   background-color: #fff;
   background-image: url(../source/worksheet4-1.png);
   background-size: contain;
+  color: #000;
   cursor: pointer;
   border: 1px solid #eee;
   border-radius: 20px;
