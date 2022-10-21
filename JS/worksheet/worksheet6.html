@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet6</title>
+  <link rel="stylesheet" href="./worksheet6.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal-content">
+      <h3>정답은 타임터너입니다!</h3>
+      <h4 style="margin: 10px 0px;">바로 헤르미온느의 시계죠ㅎ-ㅎ</h4>
+      <div class="modal-photo"></div>
+      <div><button class="close" type="button">닫기</button></div>
+    </div>
+  </div>
+
+</div>
+
+  <div class="main-background">
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#6 setTimeout setInterval</h2>
+      <p class="slide">📍사진의 정체를 맞춰주세요.</p>
+    </div>
+
+    <div class="work-area">
+
+      <h3 class="photo-text">5초 뒤에 사진이 사라집니다!</h3>
+      <div class="photo-container"></div>
+
+      <div class="question-container">
+        <h4>방금 사진의 정체는 무엇이었을까요?</h4>
+
+        <form action="" class="question-content">
+          <label><input id="rd1" type="radio" name="photo" value="watch"> 회중시계</label>
+          <label><input id="rd2" type="radio" name="photo" value="toy"> 장난감</label>
+          <label><input id="rd3" type="radio" name="photo" value="timeturner">타임터너</label>
+          <label><input id="rd4" type="radio" name="photo" value="necklace">목걸이</label>
+          <label><input id="rd5" type="radio" name="photo" value="sandglass">모래시계</label>
+          <div class="center"><input onclick="myFunction()" type="button" value="정답 확인하기" class="btn"></div>
+        </form>
+      </div>
+
+
+
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.10.21</p>
+        </div>
+        <p class="comment">radio값 가져와서 정답하나씩 확인하는 거 짰는데 진짜 개어렵다;; 자바짜는데만 한 두시간뚱땅거렸다.. 캐어렵.. 근데 결국 만들어내니까 또 잼씀 ㅜ ㅜ;;</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+      setTimeout(function(){
+        $('.photo-text').html('4초 뒤에 사진이 사라집니다!');
+      }, 1000);
+      setTimeout(function(){
+        $('.photo-text').html('3초 뒤에 사진이 사라집니다!');
+      }, 2000);
+      setTimeout(function(){
+        $('.photo-text').html('2초 뒤에 사진이 사라집니다!');
+      }, 3000);
+      setTimeout(function(){
+        $('.photo-text').html('1초 뒤에 사진이 사라집니다!');
+      }, 4000);
+      setTimeout(function(){
+        $('.photo-text').hide();
+      }, 5000);
+
+      setTimeout(function(){
+        $('.photo-container').hide();
+      }, 5000);
+
+      setTimeout(function(){
+        $('.question-container').addClass('display');
+      }, 5000);
+
+      function myFunction(){
+        var rd1 = document.getElementById('rd1');
+        var rd2 = document.getElementById('rd2');
+        var rd3 = document.getElementById('rd3');
+        var rd4 = document.getElementById('rd4');
+        var rd5 = document.getElementById('rd5');
+        
+        if (rd3.checked == true){
+          $('.modal-container').addClass('modal-display');
+        } else if (rd1.checked == true){
+          alert('틀렸슈.. 다시 정답을 찾아주세용.')
+        } else if (rd2.checked == true){
+          alert('틀렸슈.. 다시 정답을 찾아주세용.');
+        } else if (rd4.checked == true){
+          alert('틀렸슈.. 다시 정답을 찾아주세용.');
+        } else if (rd5.checked == true){
+          alert('틀렸슈.. 다시 정답을 찾아주세용.');
+      } else{ alert('정답을 골라주세요!');
+      }};
+
+      $('.close').on('click', function(){
+        $('.modal-container').removeClass('modal-display');
+      });
+
+    </script>
+
+
+</body>
+</html>
