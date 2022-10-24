@@ -41,6 +41,14 @@ h1, h2, h3, h4, h5, h6, strong {
   width: 250px;
 }
 
+.daeun-img {
+  transition: all 1s;
+}
+
+.daeun-img:hover {
+  transform: rotate(-180deg);
+}
+
 .nav-bar {
   display: flex;
   justify-content: center;
