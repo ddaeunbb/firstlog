@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet7</title>
+  <link rel="stylesheet" href="./worksheet7.css">
+</head>
+
+<body>
+
+  <div class="main-background">
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#7 regular expression</h2>
+      <p class="slide">📍이름을 지어주세요.</p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="input-container">
+        <h5>비가 추적추적 오는 밤.. 당신은 냥줍을 하게 되었습니다.</h5>
+        <h5>당신의 냥이의 이름을 지어주세요.</h5>
+        <br>
+
+        <h5>단, 김씨로 시작하는 한글로 이름을 지어야합니다.</h5>
+        
+        <div class="cat-img"></div>
+
+        <div class="cat-box">
+        <form class="form-content" action="">
+          <div class="text-box"><input type="text" id="catName" placeholder="냥이 이름을 적어주세요."></div>
+          <div class="text-box"><button id="submitBtn"type="button">이름짓기</button></div>
+        </form>
+        </div>
+
+        <div><h5 class="mycat"></h5></div>
+
+      </div>
+
+    </div>
+
+
+
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.10.24</p>
+        </div>
+        <p class="comment">함수 반복 안되는 거 배웠지롱!! /a^/등 안에 적는 regular expression 배웠다!</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+      $('#submitBtn').on('click', function(){
+        var 이름 = $('#catName').val();
+        if (이름 == ''){
+          alert('냥이의 이름을 적어주세욧!!');
+          return;
+        }
+        if (/^김/.test(이름) == false){
+          alert('김으로 시작하는 이름을 적어주세욧!!');
+          return;
+        }
+        if (/^김/.test(이름) == true){
+          $('.mycat').html(이름 + '냥이');
+        }
+      });
+
+    </script>
+
+
+</body>
+</html>
