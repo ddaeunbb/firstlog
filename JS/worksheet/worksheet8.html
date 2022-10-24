@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet8</title>
+  <link rel="stylesheet" href="./worksheet8.css">
+</head>
+
+<body>
+
+  <div class="main-background">
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#8 image carousel</h2>
+      <p class="slide">📍달리기 전체 보기.</p>
+    </div>
+
+    <div class="work-area">
+      
+      <div class="carousel-container">
+        <div class="img-carousel">
+          <div class="img-box box1"></div>
+          <div class="img-box box2"></div>
+          <div class="img-box box3"></div>
+          <div class="img-box box4"></div>
+          <div class="img-box box5"></div>
+        </div>
+      </div>
+
+      <div class="btn-container">
+        <button type="button" class="btn behind">이전</button>
+        <button type="button" class="btn next">다음</button>
+      </div>
+
+    </div>
+
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.10.24</p>
+        </div>
+        <p class="comment">개어렵다.. 함수안에 정해진 지역변수를 전역변수로 가져올 수는 없나?.. 아직 그부분의 해결이 어렵다..--> 결국 찾아서 해결 했다..ㅎㅎ</p>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+
+      var 사진값 = 1;
+      var 변수 = 350;
+
+      $('.next').on('click', function(){
+        if (사진값 <= 4){
+          이동값 = 사진값 * 변수;
+          $('.img-carousel').css('transform', 'translateX(-' + 이동값 + 'px)' );
+          사진값 = 사진값 + 1;
+        } else{
+            return;
+          }
+        });
+
+      $('.behind').on('click', function(){
+        if( 사진값 >= 1){
+          사진값 = 사진값 - 1
+          이동값 = 사진값 * 변수;
+          $('.img-carousel').css('transform', 'translateX(-' + 이동값 + 'px)' );
+        } else{
+          return;
+        }
+      });
+
+
+    </script>
+
+</body>
+</html>

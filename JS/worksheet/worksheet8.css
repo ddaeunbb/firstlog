@@ -1,0 +1,186 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "기본체";
+  src: url(../../font/NanumSquareOTF_acR.otf);
+}
+@font-face {
+  font-family: "볼드체";
+  src: url(../../font/NanumSquareOTF_acB.otf);
+}
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: "볼드체";
+}
+
+*, p {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "기본체";
+  background-color: #fff;
+  background-image: url(../../background/grid.png);
+  background-size: 90%;
+  background-attachment: fixed;
+}
+
+.black {
+  font-family: "기본체";
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: none;
+  color: #fff;
+}
+
+.title {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(4000px);
+  }
+  80% {
+    transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(4000px);
+  }
+  80% {
+    transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.slide {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+.line {
+  width: 70%;
+  max-width: 500px;
+  margin: 60px auto 30px;
+  opacity: 40%;
+}
+
+.comment-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.commnet-cotent {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-top {
+  display: flex;
+}
+
+.comment-title {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 12px;
+  padding: 15px 8px;
+  color: black;
+  opacity: 0.4;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+.work-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 90%;
+  max-width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.img-carousel {
+  width: 500%;
+  height: 350px;
+  display: flex;
+  transition: all 0.5s;
+}
+
+.img-box {
+  width: 100%;
+  background-size: cover;
+}
+
+.box1 {
+  background-image: url(../source/worksheet8-1.jpeg);
+}
+
+.box2 {
+  background-image: url(../source/worksheet8-2.jpeg);
+}
+
+.box3 {
+  background-image: url(../source/worksheet8-3.jpeg);
+}
+
+.box4 {
+  background-image: url(../source/worksheet8-4.jpeg);
+}
+
+.box5 {
+  background-image: url(../source/worksheet8-5.jpeg);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 0.8px solid #000;
+  border-radius: 20px;
+  display: block;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}/*# sourceMappingURL=worksheet8.css.map */

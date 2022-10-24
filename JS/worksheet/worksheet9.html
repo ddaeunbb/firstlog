@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <script>
+    var num = 10; // 전역 변수 num을 선언함.
+
+  function globalNum() {
+    num = 20; // 같은 이름의 지역 변수 num을 선언함.
+    document.write("함수 내부에서 지역 변수 num의 값은 " + num + "입니다.<br>");
+    document.write("함수 내부에서 전역 변수 num의 값은 " + window.num + "입니다.<br>");
+}
+
+globalNum(); // 함수 globalNum()을 호출함.
+  </script>
+  
+</body>
+</html>
