@@ -150,6 +150,18 @@ h1,h2,h3,h4,h5,h6,strong{
   background-position: center;
 }
 
+.box10{
+  background-image: url(./source/worksheet10.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.box11{
+  background-image: url(./source/worksheet11.png);
+  background-size: cover;
+  background-position: center;
+}
+
 @media screen and (max-width: 768px){
   .header{
     h1{
