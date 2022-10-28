@@ -145,6 +145,7 @@ body {
   margin-top: 350px;
   margin-left: 300px;
   z-index: 100;
+  transition: all 1s;
 }
 .img-box img {
   width: 100%;
@@ -182,4 +183,10 @@ body {
   z-index: 6;
   background-color: #000;
   opacity: 0.3;
+}
+
+@media screen and (max-width: 768px) {
+  .img-box {
+    margin-left: 250px;
+  }
 }/*# sourceMappingURL=worksheet10.css.map */
