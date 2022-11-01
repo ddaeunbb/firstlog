@@ -162,6 +162,12 @@ h1, h2, h3, h4, h5, h6, strong {
   background-position: center;
 }
 
+.box12 {
+  background-image: url(./source/worksheet12.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
 @media screen and (max-width: 768px) {
   .header h1 {
     font-size: 14px;
