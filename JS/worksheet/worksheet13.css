@@ -1,0 +1,216 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "기본체";
+  src: url(../../font/NanumSquareOTF_acR.otf);
+}
+@font-face {
+  font-family: "볼드체";
+  src: url(../../font/NanumSquareOTF_acB.otf);
+}
+h1, h2, h3, h4, h5, h6, strong {
+  font-family: "볼드체";
+}
+
+*, p {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "기본체";
+  background-color: #fff;
+  background-image: url(../../background/grid.png);
+  background-size: 90%;
+  background-attachment: fixed;
+}
+
+.black {
+  font-family: "기본체";
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: none;
+  color: #fff;
+}
+
+.title {
+  width: 80%;
+  max-width: 700px;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+.title h2 {
+  font-size: 25px;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    transform: translateX(4000px);
+  }
+  80% {
+    transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(4000px);
+  }
+  80% {
+    transform: translateX(-10px) skew(-20deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+.slide {
+  -webkit-animation-name: slide;
+          animation-name: slide;
+  -webkit-animation-duration: 1.2s;
+          animation-duration: 1.2s;
+}
+
+.line {
+  width: 70%;
+  max-width: 500px;
+  margin: 60px auto 30px;
+  opacity: 40%;
+}
+
+.comment-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 30px 24px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.commnet-cotent {
+  width: 100%;
+  height: 100%;
+}
+
+.comment-top {
+  display: flex;
+}
+
+.comment-title {
+  display: inline-block;
+  background-color: #eee;
+  border-radius: 10px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.date {
+  font-size: 12px;
+  padding: 15px 8px;
+  color: black;
+  opacity: 0.4;
+}
+
+.comment {
+  font-size: 14px;
+}
+
+.work-area {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card {
+  width: 250px;
+  height: 400px;
+}
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card-body {
+  text-align: center;
+}
+.card-body h5 {
+  font-size: 17px;
+}
+.card-body p {
+  font-size: 14px;
+}
+
+.btn {
+  width: 120px;
+  font-size: 14px;
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 20px;
+  border-radius: 20px;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.button {
+  padding: 5px 15px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+  transition: all 0.7s;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.1);
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  transition: all 0.5s;
+  visibility: hidden;
+}
+
+.modal-box {
+  position: relative;
+  height: 70px;
+  width: 90%;
+  max-width: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view {
+  visibility: visible;
+}/*# sourceMappingURL=worksheet13.css.map */
