@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Worksheet14</title>
+  <link rel="stylesheet" href="./worksheet14.css">
+</head>
+
+<body>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#14 Applemusic UI</h2>
+      <p class="slide">📍스크롤링 해보세요!</p>
+    </div>
+
+    <div class="work-area">
+      <div class="card-box">
+        <img src="../source/worksheet14-1.png" alt="">
+      </div>
+      <div class="card-box">
+        <img src="../source/worksheet14-2.png" alt="">
+      </div>
+      <div class="card-box">
+        <img src="../source/worksheet14-3.png" alt="">
+      </div>
+    </div>
+
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.11.03</p>
+        </div>
+        <p class="comment">일차방정식 해를 구해서 기울기에 따라 변화하는 애니메이션을 만들어 보았다. 일차방정식을 내가 할 줄은 몰랐지만 재밌다. </p>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script>
+    $(window).scroll(function(){
+      var 높이 = $(window).scrollTop();
+      console.log(높이);
+     
+      var a = 높이 * -1/560 + 111/56;
+      $('.card-box').eq(0).css('opacity', a);
+
+      var b = 높이 *  -1/5600 + (0.9 + 111/560);
+      $('.card-box').eq(0).css('transform', `scale( ${b} )`);
+
+      var c = 높이 * -1/400 + 19/4;
+      $('.card-box').eq(1).css('opacity', c);
+
+      var d = 높이 * -1/4000 + 11/8;
+      $('.card-box').eq(1).css('transform', `scale( ${d} )`);
+
+      var e = 높이 * -1/375 + 2200/375;
+      $('.card-box').eq(2).css('opacity', e);
+
+    });
+
+    </script>
+
+
+</body>
+</html>
