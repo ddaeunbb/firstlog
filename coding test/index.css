@@ -60,7 +60,7 @@ body {
   align-items: center;
   grid-template-columns: repeat(7, 100px);
   color: #999;
-  font-weight: 600;
+  font-family: "볼드체";
   margin: 50px 0px 10px 0px;
 }
 .days span {
@@ -101,7 +101,7 @@ body {
 .dates button:focus {
   background: #0a3d62;
   color: #fff;
-  font-weight: 600;
+  font-family: "볼드체";
 }
 
 @media screen and (max-width: 768px) {
