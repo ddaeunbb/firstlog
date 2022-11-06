@@ -271,10 +271,14 @@ h1,h2,h3,h4,h5,h6,strong{
 }
 
 @media screen and (max-width: 768px){
+  .main{
+    font-size: 15px;
+  }
   .container{
     padding: 20px 5px;
   }
   .box{
+    font-size: 10px;
     width: 150px;
     height: 100px;
   }
