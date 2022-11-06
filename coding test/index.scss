@@ -1,0 +1,127 @@
+@font-face{
+  font-family: '기본체';
+  src: url(../font/NanumSquareOTF_acR.otf)
+}
+
+@font-face{
+  font-family: '볼드체';
+  src: url(../font/NanumSquareOTF_acB.otf)
+}
+
+*{
+  margin:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: '기본체';
+}
+
+h1,h2,h3,h4,h5,h6,strong{
+  font-family: '볼드체';
+}
+
+body{
+  background: #fad390;
+  font-family: '기본체';
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 100vh;
+}
+
+.calendar{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  background:#fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+}
+
+.calendarSize{
+  width: 750px;
+  height: 500px;
+}
+
+.month{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.days{
+  font-size: 15px;
+  display: grid;
+  justify-content:center;
+  align-items:center;
+  grid-template-columns: repeat(7, 100px);
+  color:#999;
+  font-weight: 600;
+  margin: 50px 0px 10px 0px;
+
+  span{
+    width: 50px;
+    justify-self:center;
+    align-self:center;
+    text-align:center;
+  }
+}
+
+.dates{
+  display:grid;
+  grid-template-columns: repeat(7, 100px);
+  
+  button{
+    cursor:pointer;
+    outline:0;
+    border:0;
+    background:transparent;
+    font-size: 16px;
+    justify-self:center;
+    align-self:center;
+    width: 50px;
+    height: 50px;
+    border-radius:50px;
+    margin:2px;
+    transition-duration:.2s;
+
+    &.today{
+      box-shadow:inset 0px 0px 0px 2px #0a3d62;
+    }
+
+    &:first-child{
+      grid-column: 2;
+    }
+
+    &:hover{
+      background:#eee;
+    }
+
+    &:focus{
+      background:#0a3d62;
+      color:#fff;
+      font-weight:600;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar{
+    padding: 20px 10px;
+  }
+  .days{
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .dates{
+    grid-template-columns: repeat(7, 1fr);
+    button{
+      width: 45px;
+      height: 45px;
+    }
+  }
+}

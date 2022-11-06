@@ -91,6 +91,12 @@ h1,h2,h3,h4,h5,h6,strong{
 }
 
 @media screen and (max-width:786px){
+  .nav-bar{
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 20px 0px 0px 0px;
+    gap: 30px;
+  }
   .nav{
     width: 100px;
     border-radius: 100px;
