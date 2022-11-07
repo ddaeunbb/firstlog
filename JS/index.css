@@ -180,6 +180,12 @@ h1, h2, h3, h4, h5, h6, strong {
   background-position: center;
 }
 
+.box15 {
+  background-image: url(./source/worksheet15.gif);
+  background-size: cover;
+  background-position: center;
+}
+
 @media screen and (max-width: 768px) {
   .header h1 {
     font-size: 14px;
