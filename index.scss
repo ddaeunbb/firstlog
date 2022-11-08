@@ -37,18 +37,48 @@ h1,h2,h3,h4,h5,h6,strong{
   display: flex;
   justify-content: center;
   align-items: center;
-  img{
-    width: 250px;
-  }
 }
 
-.daeun-img{
-  transition: all 1s;
+.flip-outer {
+  width: 300px;
+  height: 450px;
 }
 
-.daeun-img:hover {
-  transform: rotate(-180deg);
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition:  all 1s;
 }
+
+.flip-inner:hover{
+  transform: rotateY(180deg);
+}
+
+.front {
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  z-index : 1;
+}
+
+.back {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.backtext{
+  transform: rotateY(180deg);
+  margin-top: 80px;
+  margin-left: 50px;
+}
+
+.back img{
+  width: 100%;
+}
+
 
 .nav-bar{
   display: flex;
