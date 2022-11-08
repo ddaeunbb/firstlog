@@ -32,10 +32,6 @@ body {
   width: 100%;
 }
 
-.work-area {
-  display: block;
-}
-
 .line {
   width: 70%;
   max-width: 500px;
@@ -81,7 +77,33 @@ body {
   font-size: 14px;
 }
 
-/* work-area css 부분 */
+/* work-area 부분 */
+
+.work-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn{
+  width: 150px;
+  height: 50px;
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover{
+  color: #fff;
+  background-color: #000;
+}
+
+
+/* work-area 미디어쿼리 css 부분 */
 
 @media screen and (max-width: 768px){
   .title h2{

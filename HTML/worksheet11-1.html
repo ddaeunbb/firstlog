@@ -14,11 +14,153 @@
   </head>
   <body>
 
-    <div class="top-nav">
-      <nav>
-        
-      </nav>
+    <div class="leftNav">
+
+      <div class="imgBox">
+        <img src="./photo/worksheet11/home.png" alt="">
+        <h5 class="leftNav-Title">Home</h5>
+      </div>
+
+      <div class="imgBox">
+        <img src="./photo/worksheet11/headphone.png" alt="">
+        <h5 class="leftNav-Title">Services</h5>
+      </div>
+
+      <div class="imgBox">
+        <img src="./photo/worksheet11/finish.png" alt="">
+        <h5 class="leftNav-Title">Alerts</h5>
+      </div>
+
+      <div class="imgBox">
+        <img src="./photo/worksheet11/pie-chart.png" alt="">
+        <h5 class="leftNav-Title">Stats</h5>
+      </div>
     </div>
 
+    <div class="topNav">
+      <div class="left">
+        <div class="container-fluid">
+          <input class="search" type="text" placeholder="Search">
+          <button class="black-btn">Search</button>
+        </div>
+      </div>
+        
+      <div class="right">
+        <div class="rightImg"><img src="./photo/worksheet11/bell.png" alt=""></div>
+        <div class="rightImg"><img src="./photo/worksheet11/drafts-evelope-button.png" alt=""></div>
+        <h3>Minny park</h3>
+      </div>
+
+      <div class="toggle">
+        <nav class="navbar navbar-light bg-light" style="height: 70px">
+          <div class="container-fluid">
+            <button class="navbar-toggler toggleButton" type="button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </nav> 
+      </div>
+
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <div class="main-board">
+      <div class="main-contents">
+      <h1>Dashboard</h1>
+      <div class="card-container">
+        <div class="card-box">
+          <div class="card-left">
+            <h5>Earnings (Monthly)</h5>
+            <h3>$400,000</h3>
+          </div>
+          <div class="card-right">
+            <img src="./photo/worksheet11/calendar.png" alt="">
+          </div>
+        </div>
+
+        <div class="card-box" style="border-left: 5px solid lightseagreen;">
+          <div class="card-left">
+            <h5>Earnings (Annual)</h5>
+            <h3>$800,000</h3>
+          </div>
+          <div class="card-right">
+            <img src="./photo/worksheet11/dollar-symbol.png" alt="">
+          </div>
+        </div>
+
+        <div class="card-box" style="border-left: 5px solid green;">
+          <div class="card-left">
+            <h5>Tasks</h5>
+            <h3>13</h3>
+          </div>
+          <div class="card-right">
+            <img src="./photo/worksheet11/check.png" alt="">
+          </div>
+        </div>
+
+        <div class="card-box" style="border-left: 5px solid purple;">
+          <div class="card-left">
+            <h5>Requests</h5>
+            <h3>26</h3>
+          </div>
+          <div class="card-right">
+            <img src="./photo/worksheet11/speech-bubble.png" alt="">
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom-contents">
+
+        <div class="chart-container">
+          <div class="chart-title"><h5>Earning Overview</h5></div>
+          <div class="chart-contents">
+            <canvas id="myChart" width="1500" height="650"></canvas>
+          </div>
+        </div>
+
+        <div class="task-container">
+          <div class="task taskTop"><h5>Tasks</h5></div>
+          <div class="task"><h5>Borrowed Items</h5></div>
+          <div class="task"><h5>Trello Requests</h5></div>
+          <div class="task"><h5>Marked Comments</h5></div>
+        </div>
+      
+      </div>
+
+
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      var ctx = document.getElementById('myChart').getContext('2d');
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                  borderColor: 'rgba(255, 99, 132, 1)',
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  y: {
+                      beginAtZero: true
+                  }
+              }
+          }
+      });
+      </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="./worksheet11-1.js"></script>
   </body>
 </html>
