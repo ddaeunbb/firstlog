@@ -139,9 +139,10 @@ h1,h2,h3,h4,h5,h6,strong{
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border-radius: 10px;
   padding: 10px;
   h1{
-    height: 500px;
+    height: 400px;
   }
 }
 
@@ -158,12 +159,15 @@ h1,h2,h3,h4,h5,h6,strong{
 }
 
 @media screen and (max-width: 768px){
+  .main-area{
+    padding: 80px 10px;
+  }
   .card-container{
     flex-wrap: wrap;
     margin-top: 10px;
     gap: 10px;
     justify-content: left;
-    margin-left: 25px;
+    margin-left: 10px;
   }
   .card{
     width: 150px;
@@ -188,7 +192,7 @@ h1,h2,h3,h4,h5,h6,strong{
   }
   .cart-container{
     width: 300px;
-    margin: 20px 28px;
+    margin: 20px 15px;
     h2{
       font-size: 15px;
     }

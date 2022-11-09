@@ -76,16 +76,6 @@ $('.cart').on('drop', function(e){
   $('.buy').eq(productId).click();
 })
 
-//========================
-//모바일용 드래그드롭
-//========================
-// $('.card').on('touchstart', function(e){
-//   console.log(e.target);
-// })
-
-
-
-
 
 //========================
 //검색 기능 만들기
