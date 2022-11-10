@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>search</title>
+  <link rel="stylesheet" href="./search.css">
+</head>
+<body>
+
+  <div class="backto">
+    <a class="direction" href="../index.html">
+      <button class="home">
+        <img src="../Photo/home.png" alt="">
+      </button>
+    </a>
+  </div>
+
+
+  <div class="main-background">
+
+
+    <div class="main-area">
+      <input type="text" class="search" placeholder="검색어를 입력해주세요." onkeyup="if(window.event.keyCode==13){enter()}"/>
+      <button class="searchBtn">
+        <img src="../Photo/search.png" alt="">
+      </button>
+    </div>
+
+    <!-- Worksheet list 부분 -->
+
+    <div class="list-container">
+    
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <script src="./search.js"></script>
+
+
+</body>
+</html>

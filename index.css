@@ -120,6 +120,23 @@ h1, h2, h3, h4, h5, h6, strong {
   background-color: #eee;
 }
 
+.searchBtn {
+  position: fixed;
+  left: 93vw;
+}
+
+.search {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.search img {
+  width: 100%;
+}
+
 @media screen and (max-width: 786px) {
   .nav-bar {
     width: 100%;

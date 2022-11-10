@@ -1,122 +1,121 @@
-@charset "UTF-8";
-@font-face {
-  font-family: "나눔스퀘어";
-  src: url(./font/NanumSquareOTF_acR.otf);
+@font-face{
+  font-family: '나눔스퀘어';
+  src: url(./font/NanumSquareOTF_acR.otf)
 }
+
 @font-face {
-  font-family: "나눔스퀘어2";
+  font-family: '나눔스퀘어2';
   src: url(../font/NanumSquareOTF_acB.otf);
 }
-*, p {
+
+*,p{
   margin: 0px;
   box-sizing: border-box;
 }
 
 body {
-  font-family: "나눔스퀘어";
+  font-family: '나눔스퀘어';
   background-color: #fff;
   background-image: url(./photo/background.png);
   background-size: 20%;
-  background-attachment: fixed;
+  background-attachment: fixed;  
 }
 
-a:link {
+a:link{
   text-decoration: none;
   color: black;
 }
 
-a:visited {
+a:visited{
   text-decoration: none;
   color: black;
 }
 
-.main-area {
+.main-area{
   margin: auto;
   display: block;
   padding-top: 40px;
   text-align: center;
 }
 
-.main-page img {
+.main-page img{
   width: 90%;
   max-width: 700px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
 }
 
-.main-title {
+.main-title{
   margin-top: 30px;
 }
 
-.list-container {
+.list-container{
   display: block;
   margin: 50px auto 50px;
 }
 
-.worksheet {
+.worksheet{
   width: 90%;
   max-width: 700px;
   height: 180px;
   margin: 12px auto;
   padding: 16px 24px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
   background-color: #fff;
 }
 
-.content {
+.content{
   float: left;
   width: 70%;
   height: 60%;
   padding-right: 20px;
 }
 
-.profile-top {
+.profile-top{
   display: block;
   width: 100%;
   display: flex;
   margin-bottom: 15px;
 }
 
-.blog-profile {
+.blog-profile{
   width: 33px;
-  height: 33px;
+  height: 33px; 
   margin-right: 8px;
   border-radius: 70%;
   overflow: hidden;
 }
 
-.blog-profile img {
+.blog-profile img{
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
-.profile-info {
+.profile-info{
   margin-top: 5px;
 }
 
-.profile-info p {
+.profile-info p{
   font-size: 12px;
   color: #9e9e9e;
 }
 
-.thumbnail {
+.thumbnail{
   width: 30%;
   height: 100%;
   float: left;
   display: flex;
 }
 
-.thumbnail img {
+.thumbnail img{
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
-.title p {
+.title p{
   color: #4d4d4d;
   font-size: 16px;
   height: 68px;
@@ -128,36 +127,36 @@ a:visited {
   overflow: hidden;
 }
 
-.worksheet:hover {
+.worksheet:hover{
   filter: brightness(90%);
   transition-duration: 0.2s;
 }
 
-.worksheet:active {
+.worksheet:active{
   transform: scale(0.98);
 }
 
-.home {
+.home{
   width: 70px;
   height: 70px;
   border-radius: 100px;
   background-color: #fff;
   padding: 15px;
   border: 2px solid #000;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 10%);
   cursor: pointer;
   transition: all 0.3s;
-}
-.home img {
-  width: 100%;
+  img{
+    width: 100%;
+  }
 }
 
-.home:hover {
+.home:hover{
   transform: scale(1.1);
   background-color: #eee;
 }
 
-.backto {
+.backto{
   position: fixed;
   left: 92vw;
   top: 85vh;
@@ -173,8 +172,8 @@ a:visited {
     white-space: nowrap;
     text-overflow: ellipsis;
   }
-  .backto {
+  .backto{
     left: 78vw;
     top: 90vh;
   }
-}/*# sourceMappingURL=index.css.map */
+}

@@ -107,7 +107,7 @@ $('.search').on('input', function(){
 
   $('.card-text h3').each(function(i, effect){
     let title = effect.innerHTML;
-    title = title.replace(search, `<span style="background: yellow;">${search}</span>`)
+    title = title.replace(search, `<span style="background: rgb(97, 97, 97);">${search}</span>`)
     effect.innerHTML = title;
   })
 
