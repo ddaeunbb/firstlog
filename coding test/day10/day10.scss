@@ -20,7 +20,27 @@ body{
   background-image: url(../../background/grid.png);
 }
 
-// booststrap 적용 수정
+.modal-container{
+  position: fixed;
+  z-index: 100;
+  top: 50%;
+  left: calc(50% - 90px);
+}
+
+.modal{
+  width: 180px;
+  height: 60px;
+  background-color: #2d953b;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.7s;
+  opacity: 0;
+}
 
 .title {
   width: 80%;

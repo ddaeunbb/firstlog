@@ -1,5 +1,7 @@
 var searchData = [
-  {id: 0, title : "#array #object sum(합) 구하기", src : "./day10.html", date: "22.11.10", content: "콜백함수 활용해서 array, object 정렬하기"}
+  {id: 0, title : "#array #object sum(합) 구하기", src : "./day10/day10.html", date: "22.11.10", content: "콜백함수 활용해서 array, object 정렬하기"},
+  {id: 1, title : "#reverse 문자열, array 반대정렬하기", src : "./day14/day14-1.html", date: "22.11.14", content: "reverse API"},
+  {id: 2, title : "#else if #?, #sort, #..., #repeat", src : "./day14/day14-2.html", date: "22.11.14", content: "array 정렬 함수"}
 ]
 
 // 처음에 들어왔을 때, 리스트 생성
@@ -52,7 +54,7 @@ $('.searchBtn').click(function(){
 
   $('.list h3').each(function(i, effect){
     let title = effect.innerHTML;
-    title = title.replace(search, `<span style="background: rgb(182, 182, 182)">${search}</span>`)
+    title = title.replace(search, `<span style="background: rgb(255, 205, 68)">${search}</span>`)
     effect.innerHTML = title;
   })
 

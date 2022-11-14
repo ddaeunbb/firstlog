@@ -10,6 +10,12 @@
 
 <body>
 
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
     <div class="title">
       <h2 style="margin-bottom: 30px">#array #object sum(합) 구하기</h2>
       <p class="slide">📍array forEach</p>
@@ -30,18 +36,17 @@
           <div style="clear: both;"></div>
         </div>
 
-
         <div class="code-content">
-          <pre class="code">
-<code>function solution(numbers){
+          <pre>
+<code class="code">function solution(numbers){
   var answer = 0;
   for(i of numbers) {
     answer += i;
   }
     return answer / numbers.length;
 }</code></pre>
-          <button class="copy-button">
-            <img src="./source/copy.png" alt="">
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
           </button>
         </div>
       </div>
@@ -62,8 +67,8 @@
 
 
         <div class="code-content">
-          <pre class="code">
-<code>function solution(n){
+          <pre>
+<code class="code">function solution(n){
   var answer = 0;
 
   for (let i = 0; i <= n; i++){
@@ -72,8 +77,8 @@
     }
   return answer;
 }</code></pre>
-          <button class="copy-button">
-            <img src="./source/copy.png" alt="">
+          <button class="copy-button" data-id="1">
+            <img src="../source/copy.png" alt="" data-id="1">
           </button>
         </div>
       </div>
@@ -94,6 +99,8 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
+    <script src="../allfunction.js"></script>
 
 </body>
 </html>
+
