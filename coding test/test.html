@@ -10,12 +10,18 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <script>
-  function solution(numbers) {
-    var answer = [...numbers];
-    return answer;
+
+  function solution(array) {
+    let m = new Map();
+    for (let n of array) m.set(n, (m.get(n) || 0)+1);
+    m = [...m].sort((a,b)=>b[0]-a[0]);
+    console.log(m);
   }
 
-  console.log(solution([1,2,3]));
+  solution([1,1,2,3,4])
+
+    
+
 
   </script>
   
