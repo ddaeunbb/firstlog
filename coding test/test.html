@@ -11,16 +11,9 @@
 
   <script>
 
-  function solution(array) {
-    let m = new Map();
-    for (let n of array) m.set(n, (m.get(n) || 0)+1);
-    m = [...m].sort((a,b)=>b[0]-a[0]);
-    console.log(m);
-  }
+    var a = 20;
 
-  solution([1,1,2,3,4])
-
-    
+    console.log(Array(a).fill(1).map((v, idx)=> v + idx).filter(v=> a % v === 0).length);
 
 
   </script>

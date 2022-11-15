@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 15</title>
+  <link rel="stylesheet" href="../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#gcd최대공약수 #for반복문 #new Map <br>#array안 array #new Set</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>Q. 첫 번째 분수의 분자와 분모를 뜻하는 denum1, num1, 두 번째 분수의 분자와 분모를 뜻하는 denum2, num2가 매개변수로 주어집니다.<br>두 분수를 더한 값을 기약 분수로 나타냈을 때 분자와 분모를 순서대로 담은 배열을 return 하도록 solution 함수를 완성해보세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(denum1, num1, denum2, num2) {
+  var answer = [];
+  
+  let denum = denum1 * num2 + denum2 * num1;
+  let num = num1 * num2;
+  
+  let a  = denum
+  let b = num
+  
+  const getGCD = (a,b) => (a % b === 0 ? b : getGCD(b, a%b));
+  
+  return [denum /getGCD(a,b), num /getGCD(a,b) ]
+}</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 정수 n이 매개변수로 주어질 때, n 이하의 홀수가 오름차순으로 담긴 배열을 return하도록 solution 함수를 완성해주세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(n) {
+  var answer = [];
+  for (let i = 1; i<=n; i++){
+    if (i % 2 != 0){
+      answer.push(i);
+    }}
+  return answer;
+}
+
+
+///////////////다른 풀이//////////////
+function solution(n) {
+  var answer = [];
+  for (let i = 1; i <= n; i+=2) answer.push(i);
+  return answer;
+}
+
+</code></pre>
+          <button class="copy-button" data-id="1">
+            <img src="../source/copy.png" alt="" data-id="1">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 최빈값은 주어진 값 중에서 가장 자주 나오는 값을 의미합니다. 정수 배열 array가 매개변수로 주어질 때, <br>최빈값을 return 하도록 solution 함수를 완성해보세요. 최빈값이 여러 개면 -1을 return 합니다.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(array) {
+  let m = new Map();
+  for (let n of array) m.set(n, (m.get(n) || 0)+1);
+  m = [...m].sort((a,b)=>b[0]-a[0]);
+  return m.length === 1 || m[0][1] > m[1][1] ? m[0][0] : -1;
+}</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="2">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 두 배열이 얼마나 유사한지 확인해보려고 합니다. 문자열 배열 s1과 s2가 주어질 때 같은 원소의 개수를 return하도록 solution 함수를 완성해주세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(s1, s2) {
+  var answer = 0;
+  let s3 = s1.concat(s2);
+  let s4 = new Set(s3).size;
+  answer  = s3.length - s4    
+  return answer;
+}
+
+///////////////다른 풀이//////////////
+function solution(s1, s2) {
+  const s3 = s1.filter((a)=> s2.includes(a));
+  return s3.length;
+}
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="3">
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../allfunction.js"></script>
+
+</body>
+</html>
+
