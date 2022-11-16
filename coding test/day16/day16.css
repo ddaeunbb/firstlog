@@ -1,0 +1,61 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "기본체";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Text.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+*, p {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "기본체";
+  background-color: 27272c;
+  background-size: 90%;
+  background-attachment: fixed;
+  background-image: url(../../background/grid.png);
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+button {
+  width: 120px;
+  height: 60px;
+  border-radius: 20px;
+  border: 1px solid #000;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+button:active {
+  transform: scale(0.9);
+}/*# sourceMappingURL=day16.css.map */
