@@ -10,12 +10,14 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <script>
+function solution(n) {
+    let i = 1;
+    let f = 1;
+    while (f*i < n) f*=++i;
+    return console.log(i);
+}
 
-    var a = "bus"
-    var b = "lk"
-
-    console.log(a.includes(b));
-
+console.log(solution(3628800))
   </script>
   
 </body>
