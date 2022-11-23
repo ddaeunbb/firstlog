@@ -11,24 +11,10 @@
 
   <script>
 
+    var array = [7, 77, 17]
 
-    // 약수 구하기
-    
-
-    function solution(n){
-      var answer = [];
-      for (let i=1; i<=n; i++){
-        var a = Array.from({length: i}, (a,i)=> a=i+1).filter(a=> i % a == 0).length
-        if (a>=3) answer.push(a)
-      }
-      return answer.length
-    }
-
-
-
-    console.log(solution(10));
-
-
+    var a = array.join('').split('').filter(a=>a==7).length
+    console.log(a)
 
   </script>
   

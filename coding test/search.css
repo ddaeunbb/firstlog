@@ -76,9 +76,20 @@ a:visited {
   transform: scale(0.9);
 }
 
+.count {
+  margin: 20px auto;
+  width: 180px;
+  height: 40px;
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .list-container {
   display: block;
-  margin: 50px auto 50px;
+  margin: 30px auto 50px;
 }
 
 .list {

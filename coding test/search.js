@@ -9,7 +9,8 @@ var searchData = [
   {id: 7, title : "#정규식", src : "./day16/day16-3.html", date: "22.11.16", content: "정규식 /[a-z]/"},
   {id: 8, title : "#문자열->숫자열로 바꾸기 #reduce #대문자소문자 변환 #팩토리얼", src : "./day21/day21-1.html", date: "22.11.21", content: "정규식 reduce 문자열"},
   {id: 9, title : "#가위바위보 #삼항연산자 #tilde(틸트연산자) #Math.floor #Math.max", src : "./day22/day22-1.html", date: "22.11.22", content: "~~, 삼항연산자, 틸트연산자"},
-  {id: 10, title : "#Array from", src : "./day22/day22-2.html", date: "22.11.22", content: ""},
+  {id: 10, title : "#Array from", src : "./day22/day22-2.html", date: "22.11.22", content: "연속숫자배열만들기"},
+  {id: 11, title : "#unshift #shift #pop #slice #splice", src : "./day23/day23.html", date: "22.11.23", content: "배열자르고 붙이기"}
 ]
 
 // 처음에 들어왔을 때, 리스트 생성
@@ -67,3 +68,12 @@ $('.searchBtn').click(function(){
   })
 
 })
+
+
+//===========================
+//게시물 총 개수
+//===========================
+
+$('.count').html('').append(
+  `<h4>총게시물 : ${searchData.length} 개</h4>`
+)
