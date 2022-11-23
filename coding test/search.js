@@ -5,7 +5,7 @@ var searchData = [
   {id: 3, title : "#gcd최대공약수 #for반복문 #new Map <br>#array안 array #new Set", src : "./day15/day15-1.html", date: "22.11.15", content: ""},
   {id: 4, title : "#toString #Number #fill #Array", src : "./day15/day15-2.html", date: "22.11.15", content: ""},
   {id: 5, title : "#gcd #lcd #유클리드호제법", src : "./day16/day16-1.html", date: "22.11.16", content: "array 정렬 함수"},
-  {id: 6, title : "#문자를 array로 변환 #split #[...] #array를 문자 변수로 변환 #array 숫자열로 변환", src : "./day16/day16-2.html", date: "22.11.16", content: "문자열 <--> array"},
+  {id: 6, title : "#문자를 array로 변환 #split #[...] #array를 문자 변수로 변환 #array 숫자열로 변환 #숫자를 array로 변환", src : "./day16/day16-2.html", date: "22.11.16", content: "문자열 <--> array"},
   {id: 7, title : "#정규식", src : "./day16/day16-3.html", date: "22.11.16", content: "정규식 /[a-z]/"},
   {id: 8, title : "#문자열->숫자열로 바꾸기 #reduce #대문자소문자 변환 #팩토리얼", src : "./day21/day21-1.html", date: "22.11.21", content: "정규식 reduce 문자열"}
 ]

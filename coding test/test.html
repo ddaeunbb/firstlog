@@ -10,14 +10,26 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <script>
-function solution(n) {
-    let i = 1;
-    let f = 1;
-    while (f*i < n) f*=++i;
-    return console.log(i);
-}
 
-console.log(solution(3628800))
+
+    // 약수 구하기
+    
+
+    function solution(n){
+      var answer = [];
+      for (let i=1; i<=n; i++){
+        var a = Array.from({length: i}, (a,i)=> a=i+1).filter(a=> i % a == 0).length
+        if (a>=3) answer.push(a)
+      }
+      return answer.length
+    }
+
+
+
+    console.log(solution(10));
+
+
+
   </script>
   
 </body>
