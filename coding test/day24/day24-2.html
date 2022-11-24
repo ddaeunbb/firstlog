@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 24</title>
+  <link rel="stylesheet" href="../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#array, object key,value 넣기 #문자slice #newRexExp</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>Q. 문자열 s가 매개변수로 주어집니다. s에서 한 번만 등장하는 문자를 사전 순으로<br>정렬한 문자열을 return 하도록 solution 함수를 완성해보세요. 한 번만 등장하는 문자가 없을 경우 빈 문자열을 return 합니다.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(s) {
+  const dict = []
+  s.split("").forEach(a => dict[a] !== undefined ? dict[a]+=1 : dict[a] = 1)
+  return Object.entries(dict).map(a => a[1] === 1 ? 
+  a[0] : null).filter(a => a !== null).sort().join("")
+}
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 외과의사 머쓱이는 응급실에 온 환자의 응급도를 기준으로 진료 순서를 정하려고 합니다.<br> 정수 배열 emergency가 매개변수로 주어질 때 응급도가 높은 순서대로 진료 순서를 정한 배열을 return하도록 solution 함수를 완성해주세요.
+
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(emergency) {
+  var answer = new Map();
+  var em = [...emergency].sort((a,b)=>b-a)
+  for (let i=0; i < em.length; i++){
+      answer.set(em[i],i+1)
+  }
+  return emergency.map(a=> answer.get(a))
+}
+
+
+////// 다른 풀이 ///////
+function solution(emergency){
+  let n = [...emergency].sort((a,b)=> b-a)
+  return emergency.map(a=> n.indexOf(a)+1)
+}
+
+</code></pre>
+          <button class="copy-button" data-id="1">
+            <img src="../source/copy.png" alt="" data-id="1">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>머쓱이는 친구들과 동그랗게 서서 공 던지기 게임을 하고 있습니다. 공은 1번부터 던지며 오른쪽으로 한 명을 건너뛰고<br> 그다음 사람에게만 던질 수 있습니다. 친구들의 번호가 들어있는 정수 배열 numbers와 정수 K가 주어질 때,<br> k번째로 공을 던지는 사람의 번호는 무엇인지 return 하도록 solution 함수를 완성해보세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(numbers, k) {
+  return numbers[(k-1)*2%numbers.length]
+}</code></pre>
+          <button class="copy-button" data-id="2">
+            <img src="../source/copy.png" alt="" data-id="2">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 문자열 my_str과 n이 매개변수로 주어질 때, my_str을 길이 n씩 잘라서 저장한 배열을 return하도록 solution 함수를 완성해주세요.<h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(my_str, n) {
+  let answer = []
+  for (let i =0; i < my_str.length; i+=n) answer.push(my_str.slice(i,i+n))
+  return answer
+}</code></pre>
+          <button class="copy-button" data-id="3">
+            <img src="../source/copy.png" alt="" data-id="3">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 영어가 싫은 머쓱이는 영어로 표기되어있는 숫자를 수로 바꾸려고 합니다. 문자열 numbers가 매개변수로 주어질 때,<br> numbers를 정수로 바꿔 return 하도록 solution 함수를 완성해 주세요.<h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(numbers) {
+  let a = ['zero', 'one','two','three','four','five','six','seven','eight','nine'];
+  for (let i in a) numbers = numbers.replace(new RegExp(a[i],'g'), i);
+  return +numbers
+}
+
+// 마지막 return 값에 +를 넣어준 이유는 문자열을 숫자열으로 변환하기 위함이다.
+</code></pre>
+          <button class="copy-button" data-id="4">
+            <img src="../source/copy.png" alt="" data-id="4">
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../allfunction.js"></script>
+
+</body>
+</html>
+
