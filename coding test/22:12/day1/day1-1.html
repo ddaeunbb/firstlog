@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 1</title>
+  <link rel="stylesheet" href="../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#배열의 중복값 세기</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>배열안에 있는 알파벳이나 중복값을 세야할 땐 어떻게 해야할까?</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">var array = ['a', 'b', 'c', 'c', 'a']
+var dict = {}   // 먼저 object를 열어준다.
+array.map(a=> dict[a] === undefined ? dict[a] = 1 : dict[a]+1)  // check안에 있는 [원소] 값에 따라 값을 부여해준다.
+
+// 반대로 짧은 코드를 넣자면,
+
+array.map(a=> dict[a] = (dict[a] || 0)+1) 
+
+// 위의 의미는
+
+if(dict[x])	{
+	dict[x] = dict[x] + 1;
+}else {
+    dict[x] = 0 + 1; 
+}
+
+와 같다.//
+
+console.log(check)   // 결과값 : {a: 1, b: 1, c: 1} 
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+

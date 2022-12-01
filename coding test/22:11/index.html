@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Test</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+
+  <div class="backto">
+    <a class="direction" href="../../index.html">
+      <button class="home">
+        <img src="../../Photo/home.png" alt="">
+      </button>
+    </a>
+  </div>
+
+  <div class="calendar calendarSize">
+
+    <div class="month">
+      <p>November</p>
+      <h2>2022</h2>
+    </div>
+
+    <div class="days">
+      <span>Mon</span>
+      <span>Tue</span>
+      <span>Wed</span>
+      <span>Thu</span>
+      <span>Fri</span>
+      <span>Sat</span>
+      <span>Sun</span>
+    </div>
+
+    <div class="dates">
+      <button>
+        <time>1</time>
+      </button>
+      <button>
+        <time>2</time>
+      </button>
+      <button>
+        <time>3</time>
+      </button>
+      <button>
+        <time>4</time>
+      </button>
+      <button>
+        <time>5</time>
+      </button>
+      <button>
+        <time>6</time>
+      </button>
+      <button>
+        <time>7</time>
+      </button>
+      <button>
+        <time>8</time>
+      </button>
+      <button>
+        <time>9</time>
+      </button>
+
+      <a class="direction" href="./day10/day10.html">
+        <button class="study">
+            <time>10</time>
+        </button>
+      </a> 
+
+        <button>
+          <time>11</time>
+        </button>
+
+      <button>
+        <time>12</time>
+      </button>
+      <button>
+        <time>13</time>
+      </button>
+
+      <a class="direction" href="./day14/day14.html">
+        <button class="study">
+          <time>14</time>
+        </button>
+      </a>
+
+
+      <a class="direction" href="./day15/day15.html">
+        <button class="study">
+          <time>15</time>
+        </button>
+      </a>
+
+      <a class="direction" href="./day16/day16.html">
+        <button class="study">
+          <time>16</time>
+        </button>
+      </a>
+
+      <button>
+        <time>17</time>
+      </button>
+      <button>
+        <time>18</time>
+      </button>
+      <button>
+        <time>19</time>
+      </button>
+      <button>
+        <time>20</time>
+      </button>
+
+      <a class="direction" href="./day21/day21.html">
+        <button class="study">
+          <time>21</time>
+        </button>
+      </a>
+
+
+      <a class="direction" href="./day22/day22.html">
+        <button class="study">
+          <time>22</time>
+        </button>
+      </a>
+
+      <a class="direction" href="./day23/day23.html">
+        <button class="study">
+          <time>23</time>
+        </button>
+      </a>
+
+      <a class="direction" href="./day24/day24.html">
+        <button class="study">
+          <time>24</time>
+        </button>
+      </a>
+
+      <button>
+        <time>25</time>
+      </button>
+      <button>
+        <time>26</time>
+      </button>
+      <button>
+        <time>27</time>
+      </button>
+
+      <a class="direction" href="./day28/day28.html">
+        <button class="study">
+          <time>28</time>
+        </button>
+      </a>
+
+        <button class="day29 study">
+          <time>29</time>
+        </button>
+        
+        <button>
+          <time>30</time>
+        </button>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+  <script>
+    $('.day29').click(function(){
+      alert('28일꺼 복습함')
+    })
+  </script>
+
+  <script>
+  
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $('.calendar').removeClass('calendarSize')
+  }
+  </script>
+</body>
+</html>

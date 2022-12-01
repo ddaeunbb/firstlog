@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 14</title>
+  <link rel="stylesheet" href="../../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#else if ?, sort, ..., repeat</h2>
+      <p class="slide">📍array 정렬관련 API</p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>Q. 사분면은 한 평면을 x축과 y축을 기준으로 나눈 네 부분입니다. 사분면은 아래와 같이 1부터 4까지 번호를매깁니다.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(dot) {
+  const [num,num2] = dot;
+  const check = num * num2 > 0;
+  return num > 0 ? (check ? 1 : 4) : (check ? 3 : 2);
+}</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 선분 세 개로 삼각형을 만들기 위해서는 다음과 같은 조건을 만족해야 합니다. <br>
+
+          가장 긴 변의 길이는 다른 두 변의 길이의 합보다 작아야 합니다. <br>
+          삼각형의 세 변의 길이가 담긴 배열 sides이 매개변수로 주어집니다. <br>
+          세 변으로 삼각형을 만들 수 있다면 1, 만들 수 없다면 2를 return하도록 solution 함수를 완성해주세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(sides) {
+  sides.sort((a,b) => a-b);
+  const [num1, num2, num3] = sides
+  return num1 + num2 > num3 ? 1 : 2;
+}</code></pre>
+          <button class="copy-button" data-id="1">
+            <img src="../source/copy.png" alt="" data-id="1">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 정수 배열 numbers가 매개변수로 주어집니다. numbers의 원소 중 두 개를 곱해 만들 수 있는 최댓값을 return하도록 solution 함수를 완성해주세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(numbers) {
+  var answer = 0;
+  numbers.sort((a,b) => b-a);
+  answer = numbers[0] * numbers[1]
+  return answer;
+}</code></pre>
+          <button class="copy-button" data-id="2">
+            <img src="../source/copy.png" alt="" data-id="2">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 문자열 my_string과 정수 n이 매개변수로 주어질 때, my_string에 들어있는 각 문자를 n만큼 반복한 문자열을 return 하도록 solution 함수를 완성해보세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(my_string, n) {
+  var answer = [...my_string];
+   return answer.map((a)=> a.repeat(n)).join('')
+}</code></pre>
+          <button class="copy-button" data-id="3">
+            <img src="../source/copy.png" alt="" data-id="3">
+          </button>
+        </div>
+      </div>
+
+
+    </div>
+
+    <hr class="line">
+
+    <div class="comment-container">
+      <div class="comment-content">
+        <div class="comment-top">
+          <h5 class="comment-title">숙제의 코멘터리</h5>
+          <p class="date">2022.11.14</p>
+        </div>
+        <p class="comment">else if 함수를 써야할 때는 '?' 를 활용해서 코드 줄을 줄일 수 있고, 또한 애로우 함수로 최대한 줄임표현을 적을 수 있다.</p>
+      </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+

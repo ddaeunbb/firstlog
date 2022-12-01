@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 1</title>
+  <link rel="stylesheet" href="../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#로그인성공 #치킨쿠폰 #등수 매기기 #특이한 정렬 #저주의 숫자 3</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>[로그인 성공?]<br>
+          Q. 머쓱이는 프로그래머스에 로그인하려고 합니다. 머쓱이가 입력한 아이디와 패스워드가 담긴 배열 id_pw와<br>회원들의 정보가 담긴 2차원 배열 db가 주어질 때,<br> 다음과 같이 로그인 성공, 실패에 따른 메시지를 return하도록 solution 함수를 완성해주세요.<br>
+
+          아이디와 비밀번호가 모두 일치하는 회원정보가 있으면 "login"을 return합니다.<br>
+          로그인이 실패했을 때 아이디가 일치하는 회원이 없다면 “fail”를,<br> 아이디는 일치하지만 비밀번호가 일치하는 회원이 없다면 “wrong pw”를 return 합니다.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(id_pw, db) {
+  let check = [...db.map(a=>a[0])].indexOf(id_pw[0])
+  let a = db[check]
+  console.log(a)
+  var answer = ''
+  
+  if (a == undefined){
+    answer = 'fail'
+  }
+  else if (id_pw[0]==a[0] && id_pw[1]==a[1]){
+    answer = 'login'
+  } else answer = 'wrong pw'
+  return answer
+}
+
+
+//// 다른 풀이 /////
+
+function solution(id_pw,db){
+  db = db.filter(a=>a[0]===id_pw[0]
+  if (!db.length) return 'fail';
+  
+  for (let d of db) if (d[1] ===id_pw[1]) return 'login'
+  return 'wrong pw';
+}
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[치킨 쿠폰]<br>
+          Q. 프로그래머스 치킨은 치킨을 시켜먹으면 한 마리당 쿠폰을 한 장 발급합니다. 쿠폰을 열 장 모으면<br> 치킨을 한 마리 서비스로 받을 수 있고, 서비스 치킨에도 쿠폰이 발급됩니다. 시켜먹은 치킨의 수 chicken이 매개변수로<br> 주어질 때 받을 수 있는 최대 서비스 치킨의 수를 return하도록 solution 함수를 완성해주세요.</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(chicken) {
+  let coupon = chicken;
+  let service = 0
+  
+  while(coupon>=10){
+      service+=coupon/10 << 0
+      coupon = coupon%10 + coupon/10 << 0
+  }
+  return service
+}</code></pre>
+          <button class="copy-button" data-id="1">
+            <img src="../source/copy.png" alt="" data-id="1">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[등수 매기기]<br>영어 점수와 수학 점수의 평균 점수를 기준으로 학생들의 등수를 매기려고 합니다.<br> 영어 점수와 수학 점수를 담은 2차원 정수 배열 score가 주어질 때,<br> 영어 점수와 수학 점수의 평균을 기준으로 매긴 등수를 담은 배열을 return하도록 solution 함수를 완성해주세요.
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(score) {
+  let dict = {}
+  score = [...score].map((a,i)=>(a[0]+a[1])/2)
+  let check = [...score].sort((a,b)=>b-a).forEach((a,i)=> dict[a] === undefined ? dict[a] = i+1 : null)
+  return  score.map((a,i)=> a = dict[a])
+}</code></pre>
+          <button class="copy-button" data-id="2">
+            <img src="../source/copy.png" alt="" data-id="2">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[특이한 정렬]<br>
+          Q. 정수 n을 기준으로 n과 가까운 수부터 정렬하려고 합니다. 이때 n으로부터의 거리가 같다면<br> 더 큰 수를 앞에 오도록 배치합니다. 정수가 담긴 배열 numlist와 정수 n이 주어질 때 numlist의 원소를 n으로부터<br> 가까운 순서대로 정렬한 배열을 return하도록 solution 함수를 완성해주세요.<h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(numlist, n) {
+  numlist = numlist.sort((a,b)=>b-a).map(a=> [a, Math.abs(n-a)]).sort(([,a],[,b])=>a-b)
+  return numlist.map(a=>a[0])
+}
+
+/////// 다른 풀이 ///////
+
+function solution(numlist, n) {
+  return numlist.sort((a,b)=> Math.abs(a-n) - Math.abs(b-n) || b-a)
+}
+
+</code></pre>
+          <button class="copy-button" data-id="3">
+            <img src="../source/copy.png" alt="" data-id="3">
+          </button>
+        </div>
+      </div>
+
+
+      <div class="quiz">
+        <h3>[저주의 숫자 3]<br>
+          Q. 3x 마을 사람들은 3을 저주의 숫자라고 생각하기 때문에 3의 배수와 숫자 3을 사용하지 않습니다.<br>
+          3x 마을 사람들의 숫자는 다음과 같습니다.<br>
+          1 --> 1 , 2 --> 2, 3-->4, 4--->5, 6--->7... 13--> 20, 14-->22, 15-->25<h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(n) {
+  let array = Array(n*3).fill(1).map((a,i)=>a+i)
+
+  for (let i=0; i<100; i++){
+    array = array.filter(a=> a != 3*i)
+  }
+  array = array.map(a=>String(a)).filter(a=> !a.includes('3')).map(a=>Number(a))
+    
+    return array[n-1]
+}
+
+
+//////////다른 풀이///////////
+
+function solution(n) {
+  return [...Array(n*3)]
+  .map((_,i)=>i+1)
+  .filter(a=> a%3!==0 && !a.toString().includes('3'))[n-1]
+}
+
+</code></pre>
+          <button class="copy-button" data-id="3">
+            <img src="../source/copy.png" alt="" data-id="3">
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+

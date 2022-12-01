@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 15</title>
+  <link rel="stylesheet" href="../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#toString #Number #fill #Array</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>Q. 순서쌍이란 두 개의 숫자를 순서를 정하여 짝지어 나타낸 쌍으로 (a, b)로 표기합니다. 자연수 n이 매개변수로 주어질 때 <br>두 숫자의 곱이 n인 자연수 순서쌍의 개수를 return하도록 solution 함수를 완성해주세요.(=약수의 합)</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">function solution(n){
+  var answer = [];
+  for (let i = 1; i <= n; i++){
+      if(n % i == 0){
+          answer.push(i);
+      }
+  } return answer.length;
+}
+
+
+///////////////다른 풀이 /////////////////
+function solution(n) {
+  return Array(n).fill(1).map((v,idx) => v + idx).filter(v => n % v === 0).length
+}
+
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+

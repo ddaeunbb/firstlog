@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 22</title>
+  <link rel="stylesheet" href="../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#Array from</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>Q. A-Z까지의 array를 만든다면?</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">
+  var a = Array.from({length:26}, (a,i)=> String.fromCharCode(i+65));
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>Q. 1-10까지의 array를 만든다면?</h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">
+  var a = Array.from({length:10}, (a,i)=> i+1);
+
+  //// 기존에 내가 만들던 방식 ////
+  var b = Array(10).fill(1).map((a,i)=> a=i+1);
+
+  // 출력값 [1,2,3,4,5,6,7,8,9,10] // 
+
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+
