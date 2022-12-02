@@ -10,16 +10,14 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <script>
-  
-  var array = ['a', 'b', 'c', 'c', 'a']
 
-  var dict = {}
-
-  array.map(a=> dict[a] = (dict[a] || 0)+1)
-
-  console.log(dict)
-
-
+    var a = '123'
+    var num1 = parseInt(a)
+    var num2 = 555
+    var answer = []
+    a.split('').reverse().map(a=>answer.push(5*a))
+    answer.push(num1*num2)
+    console.log(answer.join('\n'))
 
   </script>
   

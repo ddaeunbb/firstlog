@@ -47,7 +47,6 @@ body {
   padding: 50px;
   text-align: center;
 }
-
 .title h2 {
   font-size: 25px;
 }
@@ -63,6 +62,7 @@ body {
     transform: translateX(0px);
   }
 }
+
 @keyframes slide {
   0% {
     transform: translateX(4000px);
@@ -76,9 +76,9 @@ body {
 }
 .slide {
   -webkit-animation-name: slide;
-  animation-name: slide;
+          animation-name: slide;
   -webkit-animation-duration: 1.2s;
-  animation-duration: 1.2s;
+          animation-duration: 1.2s;
 }
 
 .line {
@@ -144,9 +144,11 @@ body {
   margin-bottom: 30px;
 }
 
-.quiz-img img {
-  width: 300px;
-  margin-bottom: 30px;
+.quiz-img{
+  img{
+    width: 300px;
+    margin-bottom: 30px;
+  }
 }
 
 .code-container {
@@ -214,7 +216,6 @@ body {
   bottom: 35px;
   transition: all 0.5s;
 }
-
 .copy-button img {
   width: 100%;
 }
@@ -233,4 +234,4 @@ body {
   .code-container {
     width: 90%;
   }
-} /*# sourceMappingURL=day10.css.map *//*# sourceMappingURL=allcss.css.map */
+}/*# sourceMappingURL=day10.css.map */

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 24</title>
+  <title>Day 2</title>
   <link rel="stylesheet" href="../../allcss.css">
 </head>
 
@@ -17,20 +17,16 @@
   </div>
 
     <div class="title">
-      <h2 style="margin-bottom: 30px">#array, object key, value #Object.entries</h2>
+      <h2 style="margin-bottom: 30px">#백준 JS 입력값가져오기 #trim</h2>
       <p class="slide"></p>
     </div>
 
     <div class="work-area">
 
       <div class="quiz">
-        <h3>Q. Array=[a,b,c] 를 key값으로 주고 value값으로 [1,2,3]을 주려면 어떻게 해야할까?</h3>
-      </div>
-
-
-      <div>
-        <h3>1) new Map과 반복문을 활용하여 만들기</h3>
-        <br>
+        <h3>[백준 사칙연산-1000번]<br>
+            Q.두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+        </h3>
       </div>
 
       <div class="code-container">
@@ -45,13 +41,13 @@
         <div class="code-content">
           <pre>
 <code class="code">
-  const array = ['a','b','c']
-  var newArray = new Map();
-  for (i=0; i < array.length; i++;){
-    newArray.set(array[i], i+1)
-  }
+const fs = require('fs');
+let input = fs.readFileSync("/dev/stdin").toString().trim().split(' ').map(Number);
+//trim은 문자열의 양옆에 불필요한 공백제거
 
-  // 결과 값 {'a' => 1, 'b' => 2, 'c' => 3}
+let answer = input.reduce((acc,cur)=>acc+cur,0)
+console.log(answer)
+
 </code></pre>
           <button class="copy-button" data-id="0">
             <img src="../../source/copy.png" alt="" data-id="0">
@@ -59,10 +55,10 @@
         </div>
       </div>
 
-
-      <div>
-        <h3>2) object와 반복문을 활용하여 만들기</h3>
-        <br>
+      <div class="quiz">
+        <h3>[백준 사칙연산-1001번]<br>
+            Q.두 정수 A와 B를 입력받은 다음, A-B를 출력하는 프로그램을 작성하시오.
+        </h3>
       </div>
 
       <div class="code-container">
@@ -77,10 +73,11 @@
         <div class="code-content">
           <pre>
 <code class="code">
-  const alphabet = "abcdab"
-  var object = {}
-  alphabet.split('').map(a=>object[a] !== undefined ? object[a]+=1 : object[a]=1)
-  // 결과값 : {a: 2, b: 2, c: 1, d: 1}
+const fs = require('fs');
+let input = fs.readFileSync("/dev/stdin").toString().trim().split(' ').map(Number);
+
+let answer = input.reduce((acc,cur)=> {return acc-cur} )
+console.log(answer)
 </code></pre>
           <button class="copy-button" data-id="1">
             <img src="../../source/copy.png" alt="" data-id="1">
@@ -88,9 +85,14 @@
         </div>
       </div>
 
-
       <div class="quiz">
-        <h3>Q. object에서 key와 value 값을 array로 가져오려면? + object key와 value를 배열로 한꺼번에 가져오려면?</h3>
+        <h3>[백준 사칙연산-2588번]<br>
+            Q.(세 자리 수) × (세 자리 수)는 다음과 같은 과정을 통하여 이루어진다.
+        </h3>
+      </div>
+
+      <div class="quiz-img">
+        <img src="./day2.png" alt="">
       </div>
 
       <div class="code-container">
@@ -104,13 +106,19 @@
 
         <div class="code-content">
           <pre>
-<code class="code">
-  var object = {a: 1, b: 2, c: 3, d: 4}
+<code class="code">const fs=require('fs');
+  const [num1, num2]=fs.readFileSync('/dev/stdin').toString().split('\n');
+  const num = parseInt(num1);
+  const multipleNum = num2.split('').map(Number);
+  let result = multipleNum.reverse().map(a=>num*a);
+  result.push(num*parseInt(num2));
+  console.log(result.join('\n'));
 
-  console.log(Object.keys(object))  // 결과값 : ['a','b','c','d']
-  console.log(Object.values(object))  // 결과값 : [1, 2, 3, 4]
-  console.log(Object.entries(object)) // 결과값 : 0 : ['a',1], 1:['b',2], 2:['c',3]....
-  
+
+  // 출력값 2360
+  3776
+  1416
+  181720 //
 </code></pre>
           <button class="copy-button" data-id="2">
             <img src="../../source/copy.png" alt="" data-id="2">
@@ -118,7 +126,8 @@
         </div>
       </div>
 
-      
+
+
 
 
 
@@ -127,7 +136,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
-    <script src="../allfunction.js"></script>
+    <script src="../../allfunction.js"></script>
 
 </body>
 </html>
