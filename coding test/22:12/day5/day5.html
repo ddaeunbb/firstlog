@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 5</title>
+  <link rel="stylesheet" href="../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#백틱사용하기 #사분면 #시간계산(60분)</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>[백준 사칙연산-25083번]<br>
+            Q. 아래 예제와 같이 새싹을 출력하시오.
+        </h3>
+      </div>
+
+      <div class="quiz-img">
+        <img src="./day5.png" alt="">
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">console.log(`         ,r'"7
+  r\`-_   ,'  ,/
+   \\. ". L_r'
+     \`~\\/
+        |
+        |`)
+
+
+// *백틱 사용법
+// \n : enter을 사용한 효과
+// \" : 쌍따옴표를 뜻한다.
+// \' : 따옴표를 뜻한다.
+// \: : :를 뜻한다.
+// \` : 백틱을 뜻한다. 
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[백준 사칙연산-14681번]<br>
+            Q. 두 정수가 주어질 때, 사분면 중 몇사분면에 있는지 출력하시오.
+            ex) 12 , 5 => 1사분면 
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">
+  const [x, y] = require('fs').readFileSync(0).toString().trim().split('\n').map(Number);
+
+  if(x > 0) y > 0 ? console.log(1) : console.log(4)
+  if(x < 0) y > 0 ? console.log(2) : console.log(3)</code></pre>
+          <button class="copy-button" data-id="1">
+            <img src="../../source/copy.png" alt="" data-id="1">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[백준 사칙연산-2884번]<br>
+            Q. 상근이는 매일 아침 알람을 듣고 일어난다. 알람을 듣고 바로 일어나면 다행이겠지만, 항상 조금만 더 자려는 마음 때문에<br> 매일 학교를 지각하고 있다. 상근이는 모든 방법을 동원해보았지만, 조금만 더 자려는 마음은 그 어떤 것도 없앨 수가 없었다.<br> 이런 상근이를 불쌍하게 보던, 창영이는 자신이 사용하는 방법을 추천해 주었다. 바로 "45분 일찍 알람 설정하기"이다.
+            <br>
+            이 방법은 단순하다. 원래 설정되어 있는 알람을 45분 앞서는 시간으로 바꾸는 것이다. <br>어차피 알람 소리를 들으면, 알람을 끄고 조금 더 잘 것이기 때문이다. 이 방법을 사용하면, 매일 아침 더 잤다는 기분을 느낄 수 있고, 학교도 지각하지 않게 된다.
+            <br>
+            현재 상근이가 설정한 알람 시각이 주어졌을 때, 창영이의 방법을 사용한다면, 이를 언제로 고쳐야 하는지 구하는 프로그램을 작성하시오.
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">
+let [H,M] = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map(Number);
+if (M-45 < 0){
+    H-=1;
+    M = 60 + M - 45;
+} else {
+    M = M - 45;
+}
+if (H < 0){
+    H=23;
+}
+console.log(H,M)
+// 시간과 분을 모두 합쳐서 계산하는 식으로 가려고 했으나, 그런경우 시간뿐만 아니라, 
+// m=0인경우까지 고안해야하기때문에, 위의 식이 가장 적절하다.
+
+</code></pre>
+          <button class="copy-button" data-id="2">
+            <img src="../../source/copy.png" alt="" data-id="2">
+          </button>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+

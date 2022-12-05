@@ -10,16 +10,24 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <script>
+var input =`260000
+4
+20000 3
+30000 2
+10000 6
+5000 8`
 
-    var a = '123'
-    var num1 = parseInt(a)
-    var num2 = 555
-    var answer = []
-    a.split('').reverse().map(a=>answer.push(5*a))
-    answer.push(num1*num2)
-    console.log(answer.join('\n'))
+var input = input.split('\n')
+let total = input.splice(0,2);
 
-  </script>
+for (let i =0; i<input.length; i++){
+  input[i] = input[i].split(' ')
+}
+
+let Array = [...input.map(a=>a[0]*a[1])].reduce((a,c)=>a+c,0)
+
+total[0] == Array ? console.log('Yes') : console.log('No')
+</script>
   
 </body>
 </html>

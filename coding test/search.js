@@ -17,6 +17,7 @@ var searchData = [
   {id: 15, title : "#배열의 중복값 세기", src : "./22:12/day1/day1-1.html", date: "22.12.01", content: "배열 속 중복값 세기"},
   {id: 16, title : "#로그인성공 #치킨쿠폰 #등수 매기기 #특이한 정렬 #저주의 숫자 3", src : "./22:12/day1/day1-2.html", date: "22.12.01", content: "어려웠던문제들3"},
   {id: 17, title : "#백준 JS 입력값가져오기 #trim", src : "./22:12/day2/day2.html", date: "22.12.02", content: "백준코테-사칙연산(1)"},
+  {id: 18, title : "#백틱사용하기 #사분면 #시간계산(60분)", src : "./22:12/day5/day5.html", date: "22.12.05", content: "백준코테-조건문, 반복문"},
 ]
 
 // 처음에 들어왔을 때, 리스트 생성
