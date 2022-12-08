@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 7</title>
+  <link rel="stylesheet" href="../../allcss.css">
+</head>
+
+<body>
+
+  <div class="modal-container">
+    <div class="modal">
+      <h3>복사완료✨</h3>
+    </div>
+  </div>
+
+    <div class="title">
+      <h2 style="margin-bottom: 30px">#반복문 #별찍기 #더하기 사이클 #OX문제</h2>
+      <p class="slide"></p>
+    </div>
+
+    <div class="work-area">
+
+      <div class="quiz">
+        <h3>[백준 반복문-2438번]<br>
+            Q. 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">const input = require('fs').readFileSync(0).toString();
+let star = '';
+for (let i = 0; i < input; i++){
+  for (let j = 0; j <= i; j++){
+    star += '*'
+  }
+  star += '\n'
+}
+console.log(star)
+
+
+// 출력값
+// *
+// **
+// ***
+// ****
+// *****
+
+</code></pre>
+          <button class="copy-button" data-id="0">
+            <img src="../../source/copy.png" alt="" data-id="0">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[백준 반복문-2439번]<br>
+            Q. 첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제<br>
+            하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">const input = require('fs').readFileSync(0).toString();
+let star = '';
+
+for (let i = 0; i < input; i++){
+  for (let j = input-1; j>=0; j--){
+    star += j<=i ? '*' : ' ';
+  }
+  star += '\n'
+}
+console.log(star)
+
+
+//출력값
+//     *
+//    **
+//   ***
+//  ****
+// *****
+
+</code></pre>
+          <button class="copy-button" data-id="1">
+            <img src="../../source/copy.png" alt="" data-id="1">
+          </button>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>[백준 반복문-1110번]<br>
+            Q. 0보다 크거나 같고, 99보다 작거나 같은 정수가 주어질 때 다음과 같은 연산을 할 수 있다.<br> 먼저 주어진 수가 10보다 작다면 앞에 0을 붙여 두 자리 수로 만들고, 각 자리의 숫자를 더한다.<br> 그 다음, 주어진 수의 가장 오른쪽 자리 수와 앞에서 구한 합의 가장 오른쪽 자리 수를 이어 붙이면 새로운 수를 만들 수 있다. 다음 예를 보자.<br>
+
+            26부터 시작한다. 2+6 = 8이다. 새로운 수는 68이다. 6+8 = 14이다. 새로운 수는 84이다. 8+4 = 12이다.<br> 새로운 수는 42이다. 4+2 = 6이다. 새로운 수는 26이다.
+            
+            위의 예는 4번만에 원래 수로 돌아올 수 있다.<br> 따라서 26의 사이클의 길이는 4이다.
+            
+            N이 주어졌을 때, N의 사이클의 길이를 구하는 프로그램을 작성하시오.
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">
+const input = Number(require('fs').readFileSync(0).toString());
+let num = input
+let sum;
+let count = 0;
+
+while (true){
+  count++;
+
+  sum = Math.floor(num/10) + num%10;
+  num = (num%10)*10 + sum%10;
+
+  if (num === input){
+    break
+  }
+}
+
+console.log(count)
+
+</code></pre>
+          <button class="copy-button" data-id="2">
+            <img src="../../source/copy.png" alt="" data-id="2">
+          </button>
+        </div>
+      </div>
+
+
+      <div class="quiz">
+        <h3>[백준 1차원배열-8958번]<br>
+            Q. "OOXXOXXOOO"와 같은 OX퀴즈의 결과가 있다. O는 문제를 맞은 것이고, X는 문제를 틀린 것이다.<br> 문제를 맞은 경우 그 문제의 점수는 그 문제까지 연속된 O의 개수가 된다. 예를 들어, 10번 문제의 점수는 3이 된다.<br>
+
+            "OOXXOXXOOO"의 점수는 1+2+0+0+1+0+0+1+2+3 = 10점이다.<br>
+            
+            OX퀴즈의 결과가 주어졌을 때, 점수를 구하는 프로그램을 작성하시오.
+        </h3>
+      </div>
+
+      <div class="code-container">
+        <div class="code-label">
+          <button class="labelBtn red"></button>
+          <button class="labelBtn yellow"></button>
+          <button class="labelBtn green"></button>
+          <span class="code-style">JAVASCRIPT</span>
+          <div style="clear: both;"></div>
+        </div>
+
+        <div class="code-content">
+          <pre>
+<code class="code">
+for (let i =1; i < input[0]; i++){
+  let count = 1;
+  let array = [];
+  for (let j=0; j < input[i].length; j++){
+    input[i][j] === 'O' ? array.push(count) : count=0;
+    count++;
+  }
+  console.log(array.reduce((a,c)=>a+c,0))
+}
+// 자꾸 틀리는 풀이라는데 왜 안되는지 모르겠음
+
+///////////다른 풀이
+let fs = require('fs').readFileSync('/dev/stdin').toString().split('\n');
+
+let number = Number(input[0]);
+
+for (let i = 1; i <= number; i++) {
+  let count = 0;
+  let sum = 0;
+
+  for(let j = 0; j < input[i].length; j++) {
+    if (input[i][j] === 'O') {
+      count++;
+    } else {
+      count = 0;
+    }
+    sum += count;
+  }
+  console.log(sum);
+}
+
+</code></pre>
+          <button class="copy-button" data-id="3">
+            <img src="../../source/copy.png" alt="" data-id="3">
+          </button>
+        </div>
+      </div>
+
+
+
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+    <script src="../../allfunction.js"></script>
+
+</body>
+</html>
+

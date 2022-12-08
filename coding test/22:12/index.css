@@ -114,7 +114,7 @@ a {
   background-color: #eee;
 }
 .dates button:first-child {
-  grid-column: 4;
+  grid-column: 3;
 }
 .dates button:hover {
   background: #eee;

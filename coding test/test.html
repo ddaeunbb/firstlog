@@ -10,24 +10,25 @@
   <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 
   <script>
-var input =`260000
-4
-20000 3
-30000 2
-10000 6
-5000 8`
 
-var input = input.split('\n')
-let total = input.splice(0,2);
+let num = '1';
 
-for (let i =0; i<input.length; i++){
-  input[i] = input[i].split(' ')
+let notNumber = [];
+let selfNumber = Array(10000).fill(1).map((a,i)=>a+i)
+
+while (num<20){
+  let count = Number(num);
+  num = num.split('').map(Number).reduce((a,c)=>a+c,0)
+  let sum = count;
+  sum = sum+num;
+  notNumber.push(sum)
+  
 }
 
-let Array = [...input.map(a=>a[0]*a[1])].reduce((a,c)=>a+c,0)
+// selfNumber.filter(a=>notNumber.indexOf(a)<0).map(a=>console.log(a))
+console.log(notNumber)
 
-total[0] == Array ? console.log('Yes') : console.log('No')
-</script>
+  </script>
   
 </body>
 </html>
