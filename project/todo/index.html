@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <!-- ******* -->
+    <!-- 명언만들기 -->
+    <!-- ******* -->
+    <div class="quote-container opacity">
+      <div id="quote">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- ******* -->
+    <!-- 날씨알리기 -->
+    <!-- ******* -->
+    <div class="weather-container opacity">
+      <div class="weather-box">
+        <div class="weather-png">
+          <img src="./img/cloudy.png" alt="" />
+        </div>
+        <div id="weather">
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 메인 area -->
+    <div class="main-area">
+      <div class="main">
+        <!-- ******* -->
+        <!-- 로그인 폼 -->
+        <!-- ******* -->
+        <form id="login-form">
+          <h1 class="ask-name">Hello, What is your Name?</h1>
+          <input type="text" maxlength="15" required />
+        </form>
+
+        <!-- ******* -->
+        <!-- 시계만들기, 인사말 -->
+        <!-- ******* -->
+        <div class="greeting-container hidden">
+          <h1 id="clock"></h1>
+          <h1 id="greeting"></h1>
+        </div>
+
+        <!-- ******* -->
+        <!-- 할일만들기 -->
+        <!-- ******* -->
+        <div class="todo-container hidden">
+          <form id="todo-form">
+            <input type="text" placeholder="Write a To Do and Press Enter" />
+          </form>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./JS/login.js"></script>
+  <script src="./JS/clock.js"></script>
+  <script src="./JS/quotes.js"></script>
+  <script src="./JS/background.js"></script>
+  <script src="./JS/todo.js"></script>
+  <script src="./JS/weather.js"></script>
+</html>

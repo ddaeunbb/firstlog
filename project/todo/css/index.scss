@@ -1,0 +1,195 @@
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font-family: "GmarketSansMedium";
+}
+
+.hidden {
+  display: none;
+}
+
+.opacity {
+  opacity: 0;
+}
+
+.bgcontainer {
+  position: fixed;
+  z-index: -100;
+}
+
+.background {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 90%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.ask-name {
+  color: #fff;
+}
+
+#login-form {
+  input {
+    margin-top: 10px;
+    width: 450px;
+    height: 45px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px white solid;
+    background-color: transparent;
+    text-align: center;
+    color: #ffff;
+    font-size: 25px;
+  }
+
+  input:focus {
+    outline: none;
+  }
+}
+
+#greeting {
+  color: #ffff;
+}
+
+.greeting-container {
+  text-align: center;
+}
+
+#clock {
+  font-size: 80px;
+  color: #ffff;
+}
+
+.todo-container {
+  margin-top: 50px;
+}
+
+#todo-form {
+  input {
+    width: 350px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 3px white solid;
+    background-color: transparent;
+    text-align: center;
+    color: #ffff;
+    font-size: 20px;
+  }
+  input:focus {
+    outline: none;
+  }
+  input::placeholder {
+    color: #fff;
+  }
+}
+
+#todo-list {
+  color: #ffff;
+  line-height: 3;
+  list-style-type: disc;
+  li {
+    display: flex;
+    align-items: center;
+    list-style-type: disc;
+  }
+  span {
+    flex-grow: 1;
+  }
+  button {
+    border: 1px solid #ffff;
+    background-color: #ffff;
+    border-radius: 5px;
+    height: 25px;
+    font-size: 10px;
+    transition: all 0.5s;
+  }
+  button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+.quote-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: -1;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 30px;
+  span {
+    color: rgb(170, 170, 170);
+    font-size: 12px;
+  }
+}
+
+.weather-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: end;
+  top: 20px;
+  right: 10px;
+  z-index: -1;
+}
+
+.weather-box {
+  display: flex;
+  width: 180px;
+  height: 50px;
+}
+
+.weather-png {
+  margin-right: 10px;
+  img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+#weather {
+  display: flex;
+  flex-direction: column;
+  span {
+    color: #ffff;
+  }
+}
