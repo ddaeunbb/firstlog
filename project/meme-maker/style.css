@@ -1,17 +1,136 @@
+@import "reset.css";
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.modal-container {
+  display: flex;
+  position: fixed;
+  top: 5vw;
+  left: 60vh;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 130px;
+  background-color: #ffff;
+  border: 1px solid black;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
+  z-index: 100;
+  border-radius: 30px;
+  visibility: hidden;
+}
+
+.answer-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+button#yes,
+button#no {
+  all: unset;
+  width: 70px;
+  height: 40px;
+  background-color: royalblue;
+  text-align: center;
+  border-radius: 20px;
+  border: none;
+  transition: opacity linear 0.1s;
+}
+
+button#yes:hover,
+button#no:hover {
+  opacity: 0.85;
+}
+
+.color-options {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform ease-in-out 0.1s;
+  border: 4px solid white;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
 canvas {
-  width: 700px;
-  height: 700px;
-  border: 5px solid black;
+  width: 750px;
+  height: 750px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgb(0 0 0 / 15%) 0px 2px 8px;
 }
 
 body {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  background-color: gainsboro;
+  padding: 20px;
+  font-family: "GmarketSansMedium";
 }
 
-.color-option {
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+input#color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
   width: 50px;
   height: 50px;
   cursor: pointer;
+}
+
+button,
+label {
+  all: unset;
+  padding: 10px 0px;
+  text-align: center;
+  background-color: royalblue;
+  color: white;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity linear 0.1s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+input#text {
+  all: unset;
+  text-align: center;
+  background-color: white;
+  padding: 15px 0px;
+  text-align: center;
+  font-weight: 500;
+}
+
+input#text::placeholder {
+  font-size: 11px;
+}
+
+input#file {
+  display: none;
 }

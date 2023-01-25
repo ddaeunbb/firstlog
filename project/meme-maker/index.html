@@ -8,74 +8,109 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <canvas></canvas>
-    <input id="line-width" type="range" min="1" max="15" value="5" step="0.1" />
-    <input id="color" type="color" />
-    <div>
+    <div class="modal-container">
+      <div class="modal-box">
+        <h3>You really want to reset your canvas?</h3>
+        <div class="answer-box">
+          <button id="yes">Yes</button>
+          <button id="no">No</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="color-options">
+      <input type="color" id="color" />
       <div
         class="color-option"
-        style="background-color: #1abc9c"
-        data-color="#1abc9c"
+        style="background-color: #d63031"
+        data-color="#d63031"
       ></div>
       <div
         class="color-option"
-        style="background-color: #3498db"
-        data-color="#3498db"
+        style="background-color: #e17055"
+        data-color="#e17055"
       ></div>
       <div
         class="color-option"
-        style="background-color: #34495e"
-        data-color="#34495e"
+        style="background-color: #fdcb6e"
+        data-color="#fdcb6e"
       ></div>
       <div
         class="color-option"
-        style="background-color: #27ae60"
-        data-color="#27ae60"
+        style="background-color: #ffeaa7"
+        data-color="#ffeaa7"
       ></div>
       <div
         class="color-option"
-        style="background-color: #8e44ad"
-        data-color="#8e44ad"
+        style="background-color: #55efc4"
+        data-color="#55efc4"
       ></div>
       <div
         class="color-option"
-        style="background-color: #f1c40f"
-        data-color="#f1c40f"
+        style="background-color: #00b894"
+        data-color="#00b894"
       ></div>
       <div
         class="color-option"
-        style="background-color: #e74c3c"
-        data-color="#e74c3c"
+        style="background-color: #74b9ff"
+        data-color="#74b9ff"
       ></div>
       <div
         class="color-option"
-        style="background-color: #95a5a6"
-        data-color="#95a5a6"
+        style="background-color: #0984e3"
+        data-color="#0984e3"
       ></div>
       <div
         class="color-option"
-        style="background-color: #d35400"
-        data-color="#d35400"
+        style="background-color: #a29bfe"
+        data-color="#a29bfe"
       ></div>
       <div
         class="color-option"
-        style="background-color: #bdc3c7"
-        data-color="#bdc3c7"
+        style="background-color: #6c5ce7"
+        data-color="#6c5ce7"
       ></div>
       <div
         class="color-option"
-        style="background-color: #2ecc71"
-        data-color="#2ecc71"
+        style="background-color: #fd79a8"
+        data-color="#fd79a8"
       ></div>
       <div
         class="color-option"
-        style="background-color: #e67e22"
-        data-color="#e67e22"
+        style="background-color: #e84393"
+        data-color="#e84393"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #dfe6e9"
+        data-color="#dfe6e9"
+      ></div>
+      <div
+        class="color-option"
+        style="background-color: #2d3436"
+        data-color="#2d3436"
       ></div>
     </div>
-    <button id="mode-btn">Fill</button>
-    <button id="reset-btn">Reset</button>
-    <button id="erase-btn">Eraser</button>
+    <canvas></canvas>
+
+    <div class="btns">
+      <input type="range" id="line-width" max="15" min="1" value="5" />
+
+      <button id="fill-btn">🪣 Fill</button>
+      <button id="reset-btn">💣 Reset</button>
+      <button id="eraser-btn">⚪️ Eraser</button>
+      <button id="save">📩 Save Image</button>
+      <label for="file">
+        🖼️ Upload File
+        <input type="file" accept="image/*" id="file" />
+      </label>
+      <input
+        type="text"
+        id="text"
+        placeholder="Add text here and Double click"
+      />
+    </div>
+
     <script src="./app.js"></script>
   </body>
 </html>
