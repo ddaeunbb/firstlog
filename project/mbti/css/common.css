@@ -1,0 +1,81 @@
+body {
+  font-family: "Pretendard Variable", sans-serif;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+img {
+  display: block;
+}
+
+.page-title {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #13b491;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.page-subtitle {
+  width: 240px;
+  height: 50px;
+  border: 5px solid #ffa32d;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffa32d;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.btn {
+  max-width: 500px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.3s;
+}
+.btn-orange {
+  background-color: #ffa32d;
+  box-shadow: 0 14px 0 #e66000;
+  color: #ffffff;
+}
+.btn-orange:active {
+  box-shadow: 0 4px 0 #e66000;
+  transform: translateY(10px);
+}
+
+.btn-green {
+  background-color: #32bfa1;
+  box-shadow: 0 14px 0 #299a82;
+  color: #ffffff;
+}
+.btn-green:active {
+  box-shadow: 0 4px 0 #299a82;
+  transform: translateY(10px);
+}
+.btn-gray {
+  background-color: #f2f4f6;
+  box-shadow: 0 14px 0 #dfe1e2;
+  color: #444444;
+}
+.btn-gray:active {
+  box-shadow: 0 4px 0 #dfe1e2;
+  transform: translateY(10px);
+}
+.btn-small {
+  max-width: 350px;
+  height: 70px;
+  font-size: 26px;
+  margin-bottom: 30px;
+}

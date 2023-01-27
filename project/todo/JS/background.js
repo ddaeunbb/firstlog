@@ -11,3 +11,5 @@ bgimg.classList.add("background");
 
 bgcontainer.appendChild(bgimg);
 document.body.prepend(bgcontainer);
+
+console.log("daeun");
