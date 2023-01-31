@@ -25,7 +25,7 @@ function nextQuestion(choiceNumber) {
   }
   const question = questions[currentNumber];
   mbti = mbti + question.choices[choiceNumber].value;
-  currentNumber += 1;
+  currentNumber = currentNumber + 1;
   renderQuestion();
 }
 
@@ -33,11 +33,11 @@ function showResultPage() {
   location.href = `./results.html?mbti=${mbti}`;
 }
 
+renderQuestion();
 choice1El.addEventListener("click", function () {
   nextQuestion(0);
 });
+
 choice2El.addEventListener("click", function () {
   nextQuestion(1);
 });
-
-renderQuestion();
