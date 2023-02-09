@@ -9,44 +9,120 @@
   font-family: 'Pretendard-Regular';
 }
 
-.center-contents{
+.main-background{
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./img/background.png);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 350px;
-  margin-bottom: 80px;
 }
-
-.mission{
-  text-align: center;
-}
-
-.products{
-  display: flex;
+.main-contents{
   width: 70%;
-  padding: 0px 20px;
-  justify-content: space-between;
-  margin-top: 100px;
-}
-
-.product{
-  width: 300px;
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 40px 0px;
+  text-align: center;
+}
+@keyframes rotate_image{
+  100% {
+      transform: rotate(360deg);
+  }
+}
+.main-slime{
+  width: 200px;
+  height: 200px;
+  background-image: url(./img/mainslime.png);
+  margin-bottom: 80px;
+  animation: rotate_image 6s linear infinite;transform-origin: 50% 50%;
+}
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-8deg);
+  }
+
+  50% {
+    transform: rotate(8deg);
+  }
+  
+  75% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.feedBtn{
+  margin-top: 30px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 800;
+  border-radius: 10px;
+  animation-name: shake;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+}
+.feedBtn:hover{
+  animation : none;
 }
 
-.product img{
-  width: 80%;
+.cart-background{
+  width: 100%;
+  background-image: url(./img/cartbackground.png);
+  background-attachment: fixed;
+  background-size: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+.cart-contents{
+  width: 70%;
+  margin: 100px 0px;
+}
+.products{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+.product{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 30%;
+  height: 350px;
+  background-color: blue;
+  padding: 30px 0px;
+  text-align: center;
+}
+.productImg{
+  width: 130px;
+  height: 130px;
+  background-color: green;
+}
+
 .moreBtn{
-  margin-top: 70px;
+  display: block;
+  padding: 10px 30px;
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 10px;
+  border: none;
+  background-color: #DAD8FE;
+  margin: 80px auto;
 }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
