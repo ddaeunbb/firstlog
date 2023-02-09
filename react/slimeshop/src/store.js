@@ -24,8 +24,15 @@ let products = createSlice({
       content : '우주엔 많지만 구하긴 어려운 별',
       stock : 5
     }
-  ]
+  ],
+  reducers : {
+    changeProducts(state, action){
+      console.log(state[0])
+    }
+  }
 })
+
+export let { changeProducts } = products.actions
 
 export default configureStore({
   reducer: { 

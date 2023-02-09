@@ -59,10 +59,10 @@
   }
 }
 .feedBtn{
-  margin-top: 30px;
+  margin-top: 10px;
   border: none;
   padding: 10px 20px;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 800;
   border-radius: 10px;
   animation-name: shake;
@@ -108,7 +108,9 @@
 .productImg{
   width: 130px;
   height: 130px;
-  background-color: green;
+}
+.productImg img{
+  width: 100%;
 }
 
 .moreBtn{

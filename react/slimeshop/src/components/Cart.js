@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
 import products from '../data.js'
 import axios from 'axios'
 
 function Cart(){
 
-  let items = useSelector((state)=>{return state.products})
+  let [items, setItems] = useState(products)
   let [moreBtn, setMoreBtn] = useState(true)
 
   return(
@@ -17,7 +16,9 @@ function Cart(){
             items.map((a,i)=>{
               return(
               <div className="product">
-                <div className='productImg'>이미지</div>
+                <div className='productImg'>
+                  <img alt="상품"/>
+                </div>
                 <h2>{ a.name }</h2>
                 <h3>{ a.content } </h3>
                 <p>잔여 { a.stock }개<br></br> { a.price }원</p>
@@ -32,7 +33,12 @@ function Cart(){
         {
           moreBtn ?
           <button className='moreBtn' onClick={()=>{
-            axios.get('')
+            axios.get('https://ddaeunbb.github.io/react/slimeshop/src/data2.json')
+            .then((response)=>{
+              let copy = [...items, ...response.data]
+              setItems(copy);
+              setMoreBtn(false)
+            })
           }}>더보기</button>
           : null
         }
