@@ -4,6 +4,13 @@
   font-weight: 400;
   font-style: normal;
 }
+.start {
+  opacity : 0
+}
+.end {
+  opacity : 1;
+  transition : opacity 3s;
+}
 
 h2,h3,h4,h5{
   margin: 0;
@@ -86,6 +93,30 @@ h2,h3,h4,h5{
   justify-content: center;
   align-items: center;
 }
+.modal{
+  position: fixed;
+  padding: 25px 15px;
+  border-radius: 10px;
+  border: none;
+  background-color: #DAD8FE;
+  right: 10px;
+  bottom: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 1s;
+}
+.goCart{
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  background-color: blue;
+  right: 10px;
+  bottom: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .cart-contents{
   width: 70%;
   margin: 100px 0px;
@@ -132,6 +163,7 @@ h2,h3,h4,h5{
   border: 1px solid black;
   transition: all 0.5s;
   font-weight: 600;
+  cursor: pointer;
 }
 .product button:hover{
   transform: scale(1.1);
@@ -149,6 +181,11 @@ h2,h3,h4,h5{
   border: none;
   background-color: #DAD8FE;
   margin: 80px auto;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+.moreBtn:focus{
+  transform: scale(0.93);
 }
 
 

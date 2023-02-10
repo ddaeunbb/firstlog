@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Routes, Route, Link } from 'react-router-dom'
 
 //외부 source들
-import Cart from './components/Cart.js'
+import List from './components/List.js'
 import Main from './components/Main.js'
 
 
@@ -14,8 +14,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/products" element={<div></div>} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/list" element={<List></List>} />
+        <Route path="/cart" element={<div></div>} />
       </Routes>
     </div>
   );
