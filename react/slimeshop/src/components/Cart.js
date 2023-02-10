@@ -17,10 +17,10 @@ function Cart(){
               return(
               <div className="product">
                 <div className='productImg'>
-                  <img alt="상품"/>
+                  <img src={`https://ddaeunbb.github.io/react/slimeshop/src/img/item${i}.png`} alt="상품"/>
                 </div>
                 <h2>{ a.name }</h2>
-                <h3>{ a.content } </h3>
+                <h5>{ a.content }</h5>
                 <p>잔여 { a.stock }개<br></br> { a.price }원</p>
                 <button>구매하기</button>
               </div>
